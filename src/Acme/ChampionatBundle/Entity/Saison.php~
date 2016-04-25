@@ -1,0 +1,56 @@
+<?php
+
+namespace Acme\ChampionatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Saison
+ *
+ * @ORM\Table(name="saison", indexes={@ORM\Index(name="id_ligue", columns={"id_ligue"})})
+ * @ORM\Entity
+ */
+class Saison
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Date_debut", type="date", nullable=false)
+     */
+    private $dateDebut;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Date_fin", type="date", nullable=false)
+     */
+    private $dateFin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Libelle", type="string", length=50, nullable=false)
+     */
+    private $libelle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Ligue
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Ligue")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_ligue", referencedColumnName="id")
+     * })
+     */
+    private $idLigue;
+
+
+}

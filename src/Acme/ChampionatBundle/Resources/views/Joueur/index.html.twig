@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Joueur list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Nomprenom</th>
+                <th>Datenaissance</th>
+                <th>Nationalite</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('joueur_show', { 'id': entity.id }) }}">{{ entity.nomPrenom }}</a></td>
+                <td>{% if entity.datenaissance %}{{ entity.datenaissance|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.nationalite }}</td>
+                <td>{{ entity.id }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('joueur_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('joueur_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('joueur_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

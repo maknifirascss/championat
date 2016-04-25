@@ -1,0 +1,42 @@
+<?php
+
+namespace Acme\ChampionatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Equipe
+ *
+ * @ORM\Table(name="equipe", indexes={@ORM\Index(name="id_ligue", columns={"id_ligue"})})
+ * @ORM\Entity
+ */
+class Equipe
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Nom_equipe", type="string", length=50, nullable=false)
+     */
+    private $nomEquipe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Ligue
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Ligue")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_ligue", referencedColumnName="id")
+     * })
+     */
+    private $idLigue;
+
+
+}

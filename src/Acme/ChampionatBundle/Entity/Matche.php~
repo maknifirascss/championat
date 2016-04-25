@@ -1,0 +1,62 @@
+<?php
+
+namespace Acme\ChampionatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Matche
+ *
+ * @ORM\Table(name="matche", indexes={@ORM\Index(name="id_equipe", columns={"id_equipe"}), @ORM\Index(name="id_equipe2", columns={"id_equipe2"}), @ORM\Index(name="id_journee", columns={"id_journee"})})
+ * @ORM\Entity
+ */
+class Matche
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Date", type="datetime", nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Journee
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Journee")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_journee", referencedColumnName="id")
+     * })
+     */
+    private $idJournee;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Equipe
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Equipe")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_equipe", referencedColumnName="id")
+     * })
+     */
+    private $idEquipe;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Equipe
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Equipe")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_equipe2", referencedColumnName="id")
+     * })
+     */
+    private $idEquipe2;
+
+
+}

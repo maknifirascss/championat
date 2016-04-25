@@ -1,0 +1,52 @@
+<?php
+
+namespace Acme\ChampionatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Classement
+ *
+ * @ORM\Table(name="classement", indexes={@ORM\Index(name="id_saison", columns={"id_saison"}), @ORM\Index(name="id_equipe", columns={"id_equipe"})})
+ * @ORM\Entity
+ */
+class Classement
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nb_points", type="integer", nullable=false)
+     */
+    private $nbPoints;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Equipe
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Equipe")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_equipe", referencedColumnName="id")
+     * })
+     */
+    private $idEquipe;
+
+    /**
+     * @var \Acme\ChampionatBundle\Entity\Saison
+     *
+     * @ORM\ManyToOne(targetEntity="Acme\ChampionatBundle\Entity\Saison")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_saison", referencedColumnName="id")
+     * })
+     */
+    private $idSaison;
+
+
+}

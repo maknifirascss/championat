@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Acme\ChampionatBundle\Entity\Matche" table="matche">
+    <indexes>
+      <index name="id_equipe" columns="id_equipe"/>
+      <index name="id_equipe2" columns="id_equipe2"/>
+      <index name="id_journee" columns="id_journee"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="date" type="datetime" column="Date" nullable="false"/>
+    <many-to-one field="idJournee" target-entity="Journee">
+      <join-columns>
+        <join-column name="id_journee" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idEquipe" target-entity="Equipe">
+      <join-columns>
+        <join-column name="id_equipe" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idEquipe2" target-entity="Equipe">
+      <join-columns>
+        <join-column name="id_equipe2" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

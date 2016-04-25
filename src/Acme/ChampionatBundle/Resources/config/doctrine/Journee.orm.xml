@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Acme\ChampionatBundle\Entity\Journee" table="journee">
+    <indexes>
+      <index name="id_saison" columns="id_saison"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="libelle" type="string" column="Libelle" length="50" nullable="false"/>
+    <field name="dateDebut" type="date" column="Date_debut" nullable="false"/>
+    <field name="dateFin" type="date" column="Date_fin" nullable="false"/>
+    <many-to-one field="idSaison" target-entity="Saison">
+      <join-columns>
+        <join-column name="id_saison" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="matche", indexes={@ORM\Index(name="id_equipe", columns={"id_equipe"}), @ORM\Index(name="id_equipe2", columns={"id_equipe2"}), @ORM\Index(name="id_journee", columns={"id_journee"})})
  * @ORM\Entity
  */
-class Matche
-{
+class Matche {
+
     /**
      * @var \DateTime
      *
@@ -58,16 +58,13 @@ class Matche
      */
     private $idEquipe2;
 
-
-
     /**
      * Set date
      *
      * @param \DateTime $date
      * @return Matche
      */
-    public function setDate($date)
-    {
+    public function setDate($date) {
         $this->date = $date;
 
         return $this;
@@ -78,9 +75,9 @@ class Matche
      *
      * @return \DateTime 
      */
-    public function getDate()
-    {
-        return $this->date ;
+    public function getDate() {
+
+        return $this->date;
     }
 
     /**
@@ -88,8 +85,7 @@ class Matche
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -99,8 +95,7 @@ class Matche
      * @param \Acme\ChampionatBundle\Entity\Journee $idJournee
      * @return Matche
      */
-    public function setIdJournee(\Acme\ChampionatBundle\Entity\Journee $idJournee = null)
-    {
+    public function setIdJournee(\Acme\ChampionatBundle\Entity\Journee $idJournee = null) {
         $this->idJournee = $idJournee;
 
         return $this;
@@ -111,8 +106,7 @@ class Matche
      *
      * @return \Acme\ChampionatBundle\Entity\Journee 
      */
-    public function getIdJournee()
-    {
+    public function getIdJournee() {
         return $this->idJournee;
     }
 
@@ -122,8 +116,7 @@ class Matche
      * @param \Acme\ChampionatBundle\Entity\Equipe $idEquipe
      * @return Matche
      */
-    public function setIdEquipe(\Acme\ChampionatBundle\Entity\Equipe $idEquipe = null)
-    {
+    public function setIdEquipe(\Acme\ChampionatBundle\Entity\Equipe $idEquipe = null) {
         $this->idEquipe = $idEquipe;
 
         return $this;
@@ -134,8 +127,7 @@ class Matche
      *
      * @return \Acme\ChampionatBundle\Entity\Equipe 
      */
-    public function getIdEquipe()
-    {
+    public function getIdEquipe() {
         return $this->idEquipe;
     }
 
@@ -145,8 +137,7 @@ class Matche
      * @param \Acme\ChampionatBundle\Entity\Equipe $idEquipe2
      * @return Matche
      */
-    public function setIdEquipe2(\Acme\ChampionatBundle\Entity\Equipe $idEquipe2 = null)
-    {
+    public function setIdEquipe2(\Acme\ChampionatBundle\Entity\Equipe $idEquipe2 = null) {
         $this->idEquipe2 = $idEquipe2;
 
         return $this;
@@ -157,11 +148,22 @@ class Matche
      *
      * @return \Acme\ChampionatBundle\Entity\Equipe 
      */
-    public function getIdEquipe2()
-    {
+    public function getIdEquipe2() {
         return $this->idEquipe2;
     }
-     public function __toString() {
-        return $this->getId();
+
+    /**
+     * String representation of this object
+     * @return string
+     */
+    public function __toString() {
+        $output = '';
+        try {
+            $output = (string) $this->getIdEquipe() . ' vs ' . $this->getIdEquipe2() . ' Date ' . $this->getDate();
+        } catch (Exception $e) {
+            return '';
+        }
+        return $output;
     }
+
 }

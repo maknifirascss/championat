@@ -16,7 +16,7 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('saison_show', { 'id': entity.id }) }}">{{ entity.dateDebut }}</a></td>
+                <td><a href="{{ path('saison_show', { 'id': entity.id }) }}">{{ entity.dateDebut|date('Y-m-d H:i:s') }}</a></td>
                 <td>{% if entity.dateFin %}{{ entity.dateFin|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ entity.libelle }}</td>
                 <td>{{ entity.id }}</td>

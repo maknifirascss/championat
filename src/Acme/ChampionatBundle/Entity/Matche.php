@@ -76,7 +76,10 @@ class Matche {
      * @return \DateTime 
      */
     public function getDate() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74463702cc116a82326f31afe5b9e907165fffb7
         return $this->date;
     }
 
@@ -152,6 +155,7 @@ class Matche {
         return $this->idEquipe2;
     }
 
+<<<<<<< HEAD
     /**
      * String representation of this object
      * @return string
@@ -164,6 +168,10 @@ class Matche {
             return '';
         }
         return $output;
+=======
+    public function __toString() {
+        return $this->getIdEquipe() . ' vs ' . $this->getIdEquipe2();
+>>>>>>> 74463702cc116a82326f31afe5b9e907165fffb7
     }
 
 }

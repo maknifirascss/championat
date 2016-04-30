@@ -110,3 +110,5 @@ c1d2f2,::1,GET,http://localhost/Projet/web/app_dev.php/saison/,1462009852,
 >>>>>>> dev
 b5f8ac,::1,GET,http://localhost/Projet/web/app_dev.php/saison/,1462009993,
 >>>>>>> 74463702cc116a82326f31afe5b9e907165fffb7
+d3befd,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/,1462010238,
+8414dc,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/saison/,1462010254,

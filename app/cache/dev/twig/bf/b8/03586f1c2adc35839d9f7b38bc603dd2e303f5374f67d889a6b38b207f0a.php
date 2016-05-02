@@ -29,7 +29,10 @@ class __TwigTemplate_bfb803586f1c2adc35839d9f7b38bc603dd2e303f5374f67d889a6b38b2
     {
         // line 4
         echo "<h1>Matche list</h1>
-
+   
+    <button type=\"button\" class=\"btn btn-primary\">Primary</button>
+    <input type=\"button\" class=\"btn btn-success\" value=\"ok\">
+    <input type=\"button\"  value=\"ok\">
     <table class=\"records_list\">
         <thead>
             <tr>
@@ -40,33 +43,33 @@ class __TwigTemplate_bfb803586f1c2adc35839d9f7b38bc603dd2e303f5374f67d889a6b38b2
         </thead>
         <tbody>
         ";
-        // line 15
+        // line 18
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 16
+            // line 19
             echo "            <tr>
                 <td><a href=\"";
-            // line 17
+            // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("matche_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "date"), "Y-m-d H:i:s"), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 18
+            // line 21
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
             echo "</td>
                 <td>
                 <ul>
                     <li>
                         <a href=\"";
-            // line 22
+            // line 25
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("matche_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">show</a>
                     </li>
                     <li>
                         <a href=\"";
-            // line 25
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("matche_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">edit</a>
                     </li>
@@ -78,14 +81,14 @@ class __TwigTemplate_bfb803586f1c2adc35839d9f7b38bc603dd2e303f5374f67d889a6b38b2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 34
         echo "        </tbody>
     </table>
 
         <ul>
         <li>
             <a href=\"";
-        // line 36
+        // line 39
         echo $this->env->getExtension('routing')->getPath("matche_new");
         echo "\">
                 Create a new entry
@@ -107,6 +110,6 @@ class __TwigTemplate_bfb803586f1c2adc35839d9f7b38bc603dd2e303f5374f67d889a6b38b2
 
     public function getDebugInfo()
     {
-        return array (  89 => 36,  82 => 31,  70 => 25,  64 => 22,  57 => 18,  51 => 17,  48 => 16,  44 => 15,  31 => 4,  28 => 3,);
+        return array (  92 => 39,  85 => 34,  73 => 28,  67 => 25,  60 => 21,  54 => 20,  51 => 19,  47 => 18,  31 => 4,  28 => 3,);
     }
 }

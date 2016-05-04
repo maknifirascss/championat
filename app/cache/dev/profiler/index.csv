@@ -78,3 +78,6 @@ c1d2f2,::1,GET,http://localhost/Projet/web/app_dev.php/saison/,1462009852,
 >>>>>>> dev
 b5f8ac,::1,GET,http://localhost/Projet/web/app_dev.php/saison/,1462009993,
 >>>>>>> origin/dev
+3c59bc,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/butmarque/new,1462385330,
+9bb7de,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/butmarque,1462385455,
+789d02,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/butmarque/,1462385457,

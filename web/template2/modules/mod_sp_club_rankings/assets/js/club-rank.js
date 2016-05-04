@@ -1,0 +1,2 @@
+jQuery(function($){'use strict'
+if($("#carousel-rank").length){var $rankCarousel=$("#carousel-rank");$rankCarousel.carousel();$(".left.rank-control").click(function(){$rankCarousel.carousel('prev');});$(".right.rank-control").click(function(){$rankCarousel.carousel('next');});}});

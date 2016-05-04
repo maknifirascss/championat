@@ -1,0 +1,89 @@
+/**
+ * @package     SP Soccer
+ *
+ * @copyright   Copyright (C) 2010 - 2015 JoomShaper. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+
+/* ***************    Team Details   *************** */
+/* ************************************************* */
+
+.spsoccer .spsoccer-team-career .spsoccer-ul-list{
+  padding: 0;
+}
+
+.spsoccer .spsoccer-team-honours-list > .spsoccer-row, .spsoccer-team-jersey-list > .spsoccer-row{
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.spsoccer .spsoccer-team-honours-list .media, .spsoccer-team-jersey-list .media{
+  display: table;
+}
+
+.spsoccer .spsoccer-team-honours-list .media-body, .spsoccer-team-jersey-list .media-body{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.spsoccer .honours-intro .number-type {
+  height: 110px;
+  width: 110px;
+  text-align: center;
+  vertical-align: middle;
+  padding-right: 0;
+  margin-right: 40px;
+}
+
+
+.spsoccer .honours-intro .number-type{
+  background-color: #fad32b;
+}
+
+.spsoccer .honours-intro .number-type h3 {
+  margin: 15px 0 0;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.spsoccer .honours-intro .number-type span {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.spsoccer .honours-intro .club-team-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+.spsoccer .honours-intro .win-list{
+  white-space: pre-line;
+  overflow: hidden; 
+}
+
+.spsoccer .honours-intro .win-list, .honours-intro .club-team-title {
+  color: #666;
+}
+
+
+.spsoccer .spsoccer-team-jersey-list .jersey-img{
+  width: 300px;
+  margin-right: 30px;
+}
+
+.spsoccer .spsoccer-team-jersey-list .club-jersey-text p {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+
+.spsoccer .spsoccer-team-gallery-list .spsoccer-row > div{
+  padding: 0 15px 15px 0;
+}
+

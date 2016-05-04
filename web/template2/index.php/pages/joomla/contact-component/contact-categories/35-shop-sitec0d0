@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Contact Categories</title>
+		<description><![CDATA[]]></description>
+		<link>http://demo.joomshaper.com/2015/soccer/index.php/pages/joomla/contact-component/contact-categories/35-shop-site</link>
+		<lastBuildDate>Sat, 30 Apr 2016 10:37:11 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://demo.joomshaper.com/2015/soccer/index.php/pages/joomla/contact-component/contact-categories/35-shop-site?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<managingEditor>install@joomshaper.com (Shaper Soccer)</managingEditor>
+		<item>
+			<title>Shop Address</title>
+			<link>http://demo.joomshaper.com/2015/soccer/index.php/pages/joomla/contact-component/contact-categories/35-shop-site/8</link>
+			<guid isPermaLink="true">http://demo.joomshaper.com/2015/soccer/index.php/pages/joomla/contact-component/contact-categories/35-shop-site/8</guid>
+			<description><![CDATA[]]></description>
+			<author>install@joomshaper.com (Joomla)</author>
+			<category>Shop Site</category>
+			<pubDate>Fri, 31 Dec 2010 23:00:01 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

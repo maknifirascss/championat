@@ -1,0 +1,2 @@
+jQuery(function($){'use strict'
+if($("#carousel-recent-result").length){var $rrCarousel=$("#carousel-recent-result");$rrCarousel.carousel();$(".left.rr-control").click(function(){$rrCarousel.carousel('prev');});$(".right.rr-control").click(function(){$rrCarousel.carousel('next');});}});

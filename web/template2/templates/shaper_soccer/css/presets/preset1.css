@@ -1,0 +1,417 @@
+a {
+  color: #fad32b;
+}
+a:hover {
+  color: #ecc106;
+}
+#sp-menu .sp-megamenu-parent >li.active>a,
+#sp-menu .sp-megamenu-parent >li:hover>a {
+  color: #fad32b;
+}
+#sp-menu .sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #fad32b;
+}
+#sp-menu .sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  color: #fad32b;
+}
+#sp-menu .sp-megamenu-parent .sp-dropdown .sp-dropdown-inner ul >li.active >a {
+  background: #fad32b;
+  color: #000;
+}
+#offcanvas-toggler >i:hover {
+  color: #fad32b;
+}
+.btn-primary,
+.sppb-btn-primary {
+  border-color: #f9cd0d;
+  background-color: #fad32b;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  border-color: #d4ad05;
+  background-color: #ecc106;
+}
+ul.social-icons >li a:hover {
+  color: #fad32b;
+}
+.sp-page-title {
+  background: #fad32b;
+}
+.soccer-title-icon .title-icon span.icon-bar {
+  background-color: #fad32b;
+}
+.pagination-wrapper .pagination>li>a:hover,
+.soccer-pagination .pagination>li>a:hover {
+  background-color: #fad32b;
+}
+.pagination-wrapper .pagination>li.active>a,
+.soccer-pagination .pagination>li.active>a {
+  background-color: #fad32b;
+}
+.sp-module ul.soccer-login li >a {
+  background: #fad32b;
+}
+.sp-module ul.soccer-login:hover a {
+  background: #ecc106;
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sppb-addon-upcoming-match .team-name p {
+  background-color: #fad32b;
+  border-color: #fad32b;
+}
+.sppb-addon-upcoming-match .team-name p:first-child:after {
+  border-left: 39px solid #fad32b;
+}
+.sppb-addon-upcoming-match .team-name p:last-child:before {
+  border-bottom: 56px solid #fad32b;
+}
+.soccer-social-share span:hover a {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts .leading-item .news-details .post-author span.entry-author {
+  background: #fad32b;
+}
+.sppb-addon-latest-posts .news-details .post-author span.entry-author {
+  background: #fad32b;
+}
+.sppb-addon-latest-posts .news-details h2.entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .leading-item .post-info .post-category {
+  background-color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .leading-item .post-info .entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .latest-post.sub-item .latest-post-inner .post-info .post-category a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .latest-post.sub-item .latest-post-inner .post-info .entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .latest-post.sub-item .latest-post-inner .post-info .entry-meta {
+  font-size: 12px;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .latest-post.sub-item .latest-post-inner .post-info .entry-meta span {
+  margin-right: 15px;
+}
+.sppb-addon-latest-posts.orderby-hits.layout_two .latest-post.sub-item .latest-post-inner .post-info .entry-meta span i {
+  margin-right: 5px;
+}
+.sppb-addon-latest-posts.orderby-latest.layout_one .sub-item .latest-news-details .post-author {
+  background-color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-latest.layout_two .latest-post.sub-item .latest-news-details .post-category .entry-category {
+  background-color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-latest.layout_two .latest-post.sub-item .latest-news-details .entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.post-type-video.layout_one .sppb-video-post-item .sppb-video-post-wrapper i:hover {
+  color: #fad32b;
+  border-color: #fad32b;
+}
+.sppb-addon-latest-posts.post-type-video.layout_one .sppb-video-post-item .sppb-video-post-wrapper .sppb-video-post-intro .sppb-overlay-inner .entry-title a {
+  color: #fff;
+}
+.sppb-addon-latest-posts.post-type-video.layout_one .sppb-video-post-item .sppb-video-post-wrapper .sppb-video-post-intro .sppb-overlay-inner .entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.post-type-video.layout_two .latest-posts .latest-video .latest-video-inner .sppb-video-post-item .background-img i:hover {
+  color: #fad32b;
+  border-color: #fad32b;
+}
+.sppb-addon-latest-posts.post-type-video.layout_two .latest-posts .latest-video .latest-video-inner .sppb-video-post-item .sppb-video-post-intro .sppb-overlay-inner .entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-featured.layout_one .latest-posts .leading-item .latest-post-inner .entry-title a:hover {
+  color: #fad32b;
+}
+.sppb-addon-latest-posts.orderby-featured.layout_one .latest-posts #carousel-lp-featured .tp-controls .lp-featured-control {
+  background: #fad32b;
+}
+#carousel-tp .tp-controls a.tp-control {
+  background-color: #fad32b;
+}
+.sppb-addon-thumb-gallery .flex-direction-nav li.flex-nav-prev a {
+  background: #fad32b;
+}
+.sppb-addon-thumb-gallery .flex-direction-nav li.flex-nav-next a {
+  background: #fad32b;
+}
+.sppb-addon-thumb-gallery #carousel ul li.flex-active-slide:after {
+  background-color: rgba(250,211,43,0.3);
+}
+.sppb-addon-thumb-gallery #carousel ul li:after {
+  background-color: rgba(250,211,43,0.3);
+}
+.sppb-addon-thumb-gallery #carousel li.flex-active-slide:after {
+  background-color: rgba(250,211,43,0.3);
+}
+.soccer-twitter-feed-2 .sppb-addon-tweet .sppb-tweet-slider .sppb-tweet-text:hover a {
+  color: #fad32b;
+}
+#sppb-slider2-carousel .item .slider2-title {
+  background-color: #fad32b;
+}
+#sppb-slider2-carousel .item .slider2-box .slider2-time {
+  color: #fad32b;
+}
+#sppb-slider2-carousel .slider2-carousel-indicators ::-webkit-scrollbar-thumb {
+  background: rgba(250,211,43,0.5);
+}
+#sppb-slider2-carousel .slider2-carousel-indicators ::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(250,211,43,0.5);
+}
+#sppb-slider2-carousel .slider2-carousel-indicators .active {
+  background: rgba(250,211,43,0.5);
+}
+.sp-module .latestnews >div >a {
+  color: #555555;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #fad32b;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #fad32b;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: #fad32b;
+}
+.search .btn-toolbar button {
+  background: #fad32b;
+}
+.sp-comingsoon .days .number,
+.sp-comingsoon .hours .number,
+.sp-comingsoon .seconds .number,
+.sp-comingsoon .minutes .number {
+  display: inline-block;
+  font-size: 66px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #fad32b;
+}
+.sp-comingsoon #sp-comingsoon .sp-position-comingsoon input:focus {
+  background-color: #fef7d9;
+}
+.sp-comingsoon #sp-comingsoon .sp-position-comingsoon input[type="button"] {
+  background-color: #fad32b;
+}
+.sp-comingsoon div.acymailing_module_success {
+  background: #fdeda8;
+  border: 2px solid #ecc106;
+}
+.error-page-inner .btn-primary {
+  background-color: #fad32b;
+}
+.soccer-search:hover {
+  color: #fad32b;
+}
+.soccer-search:hover ::-webkit-input-placeholder {
+  color: #fad32b;
+}
+.soccer-search:hover ::-moz-placeholder {
+  color: #fad32b;
+}
+.soccer-search:hover:after {
+  color: #fad32b;
+}
+.soccer-news-highlighter .news-highlighter-text {
+  background-color: #fad32b;
+}
+.soccer-news-highlighter .news-highlighter-text:before {
+  background-color: #fad32b;
+}
+.soccer-news-highlighter .sp_news_higlighter a:hover {
+  color: #fad32b;
+}
+.soccer-news-highlighter .sp_news_higlighter .sp-nh-buttons {
+  color: #fad32b;
+}
+.soccer-poll input[type="submit"] {
+  background-color: #fad32b;
+}
+.soccer-poll input[type="submit"]:hover {
+  background-color: #bb9804;
+}
+.soccer-recent-result .clubnames span.pull-right {
+  color: #fad32b;
+}
+.tagspopular ul li a {
+  background: #fad32b;
+}
+.tagspopular ul li a:hover {
+  color: #fad32b;
+}
+.post-format {
+  background: #fad32b;
+}
+.voting-symbol span.star.active:before {
+  color: #fad32b;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #ecc106;
+}
+.entry-link,
+.entry-quote {
+  background: #fad32b;
+}
+blockquote {
+  border-color: #fad32b;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #fad32b;
+}
+.blog .entry-header .article-infos dl.article-info,
+.view-article .entry-header .article-infos dl.article-info {
+  border-left: solid 3px #fad32b;
+}
+.blog .entry-header .article-infos dl.article-info dd.category-name a,
+.view-article .entry-header .article-infos dl.article-info dd.category-name a {
+  background: #fad32b;
+}
+.blog .article-details p.readmore a.btn-default:hover,
+.view-article .article-details p.readmore a.btn-default:hover {
+  background: #fad32b;
+}
+.blog ul.pagenav li a,
+.view-article ul.pagenav li a {
+  background: #fad32b;
+}
+.blog ul.pagenav li a:hover,
+.view-article ul.pagenav li a:hover {
+  color: #fad32b;
+}
+.sp-comingsoon body {
+  background-color: #fad32b;
+}
+.pagination>li>a,
+.pagination>li>span {
+  color: #555555;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #555555;
+}
+.pagination>.active>a,
+.pagination>.active>span {
+  border-color: #fad32b;
+  background-color: #fad32b;
+}
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  border-color: #fad32b;
+  background-color: #fad32b;
+}
+.bottom-quick-link .sppb-addon-content:hover .sppb-media  .pull-right {
+  background-color: #fad32b;
+}
+.sp-bottom-footer ul li a:hover {
+  color: #fad32b;
+}
+#sp-footer a {
+  color: #fad32b;
+}
+.view-spsoccer-tournaments .spsoccer-row .spsoccer-tournament-name .tournament-details a h3:hover {
+  color: #fad32b;
+}
+.tournament-details-top .match-time span {
+  color: #fad32b;
+}
+.tournament-details-tab ul.nav-tabs li a:hover * {
+  color: #fad32b;
+}
+.spsoccer-fixture-wrapper .title {
+  background: #fad32b;
+}
+.spsoccer-fixture-wrapper .title span {
+  background: #f6c906;
+}
+.spsoccer-result-wrapper .title {
+  background: #fad32b;
+}
+.spsoccer-result-wrapper .title span {
+  background: #f6c906;
+}
+.spsoccer-result-wrapper .item-list-wrap a:hover * {
+  color: #fad32b !important;
+}
+.spsoccer-standings-wrapper .pointboard-header {
+  background: #fad32b;
+}
+.spsoccer-group-wrapper .title {
+  background: #fad32b;
+}
+.spsoccer-group-wrapper .title span {
+  background: #f6c906;
+}
+.spsoccer-group-wrapper .item-list-wrap a:hover * {
+  color: #fad32b !important;
+}
+.view-spsoccer-match-view .match-details-top .match-time span {
+  color: #fad32b;
+}
+.view-spsoccer-match-view .match-details-top .match-result .goal-timeline ul.goal-timeline1:after {
+  background-color: #fad32b;
+}
+.view-spsoccer-match-view .match-details-top .match-result .goal-timeline ul.goal-timeline2:after {
+  background-color: #fad32b;
+}
+.view-spsoccer-match-view .match-tab .nav-tabs li a:hover {
+  color: #fad32b;
+}
+.view-spsoccer-match-view .match-tab .tab-content .spsoccer-match-team h3.header {
+  background: #fad32b;
+}
+.view-spsoccer-match-view .match-tab .tab-content .spsoccer-match-team .spsoccer-match-teams-players .item-list-wrap .team-overlay-inner .player-name-inner .more {
+  background-color: #fad32b;
+}
+.view-spsoccer-teams .soccer-team .team-description a:hover {
+  color: #fad32b;
+}
+.view-spsoccer-teams .soccer-team .team-description ul.team-social li a i:hover {
+  background: #fad32b;
+  color: #000;
+}
+.view-spsoccer-team .spsoccer-team-basic .team-header .team-details-social ul li a i {
+  background-color: #fad32b;
+}
+.view-spsoccer-team .spsoccer-team-basic .team-header .team-details-social ul li a:hover i {
+  background-color: #ecc106;
+}
+.view-spsoccer-team .torunament-info .team-details-tab ul.nav-tabs li.active a {
+  border-bottom: 3px solid #fad32b !important;
+}
+.view-spsoccer-team .torunament-info .team-details-tab .tab-content .spsoccer-team-honours-list .honours-intro .number-type {
+  background: #fad32b;
+}
+.view-spsoccer-players .player .player-info-details h3:hover {
+  color: #fad32b;
+}
+.view-spsoccer-player .tournament-header .spsoccer-player-social-profile ul li i {
+  background-color: #fad32b;
+}
+.view-spsoccer-player .tournament-header .spsoccer-player-social-profile ul li:hover i {
+  background-color: #ecc106;
+}
+.spsoccer-match-landing h3.title,
+.spsoccer-result-landing h3.title {
+  background: #fad32b;
+}
+.spsoccer-match-landing h3.title span,
+.spsoccer-result-landing h3.title span {
+  background: #f9ce12;
+}
+.spsoccer-match-landing .item-list-wrap a:hover span,
+.spsoccer-result-landing .item-list-wrap a:hover span {
+  color: #fad32b;
+}

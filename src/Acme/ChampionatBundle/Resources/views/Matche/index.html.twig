@@ -1,6 +1,95 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
+    <section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-page-title"style="background-image: url('{{ asset('template/images/demo/blog-bg.jpg') }}')"><div class="container"><h2>Copa America 2015 - Matches</h2>
+                            <ol class="breadcrumb">
+                                <span>You are here: &#160;</span><li><a href="../../index-2.html" class="pathway">Home</a></li><li><a href="7.html" class="pathway">LIGA BBVA</a></li><li class="active">Matches</li></ol>
+                        </div></div></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">
+                        </div>
+                        <div id="akeeba-renderjoomla">
+
+                            <div id="spsoccer" class="spsoccer view-spsoccer-tournaments spsoccer-match-landing">
+
+                                <h3 class="text-center title"><span>Matches</span></h3>
+                                <!-- START:: fixture -->
+
+                                {% for entity in entities %}
+
+                                    <div class="item-list-wrap">
+                                        <div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 text-left">
+                                            <a href="matches/20-manchester-city-vs-bayen-munchen.html">
+                                                <img class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{ asset('template/images/demo/team-logo/8.png') }}" alt="Manchester City">
+                                                <span class="spsoccer-team-name">{{entity.idEquipe}}</span>
+                                            </a>
+                                        </div> <!-- /.spsoccer-col-lg -->
+
+                                        <div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12">
+                                            <div class="spsoccer-match-date-time">
+                                                <span>{{ entity.date|date('Y-m-d') }}</span>,
+                                                <span>{{ entity.date|date('H:i') }}</span>
+                                            </div>
+
+                                            <p class="spsoccer-match-location">Old Trafford</p>
+
+                                            <!--p class="spsoccer-match-location">
+                                                                            </p -->
+                                        </div><!-- /.spsoccer-col-lg -->
+
+                                        <div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 text-right">
+                                            <a href="matches/20-manchester-city-vs-bayen-munchen.html">
+                                                <span class="spsoccer-team-name">{{entity.idEquipe2}}</span>
+                                                <img class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{ asset('template/images/demo/team-logo/5.png') }}"  alt="Bayern München" >
+
+                                            </a>
+                                        </div><!-- /.spsoccer-col-lg -->
+
+                                    </div>
+
+                                {% endfor %}   
+
+                                <div class="soccer-pagination">
+                                    <ul class="pagination"><li class='active'><a>1</a></li><li><a class='' href='matches9b5f.html?start=5' title='2'>2</a></li><li><a class='next' href='matches9b5f.html?start=5' title='&raquo;'>&raquo;</a></li><li><a class='' href='matches9b5f.html?start=5' title='End'>End</a></li></ul>			</div>
+                                <!-- END:: Pagination -->
+
+                            </div></div>
+                    </div></div></div></div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+    
     <h1>Matche list</h1>
 
     <table class="records_list">
@@ -8,34 +97,41 @@
             <tr>
                 <th>Date</th>
                 <th>Id</th>
+                <th>Id</th>
+                <th>Id</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('matche_show', { 'id': entity.id }) }}">{{ entity.date|date('Y-m-d H:i:s') }}</a></td>
-                <td>{{ entity.id }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('matche_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('matche_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('matche_show', { 'id': entity.id }) }}">{{ entity.date|date('Y-m-d H:i:s') }}</a></td>
+            <td>{{ entity.id }}</td>
+            <td>{{ entity.idEquipe }}</td>
+            <td>{{ entity.idEquipe2 }}</td>
+            <td>
+            <ul>
+                <li>
+                    <a href="{{ path('matche_show', { 'id': entity.id }) }}">show</a>
+                </li>
+                <li>
+                    <a href="{{ path('matche_edit', { 'id': entity.id }) }}">edit</a>
+                </li>
+            </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
-        <ul>
-        <li>
-            <a href="{{ path('matche_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+    <ul>
+    <li>
+        <a href="{{ path('matche_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+            
+            
+    -->  
+{% endblock %}

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+
+<!-- Mirrored from demo.joomshaper.com/2015/soccer/index.php/home/home-2 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Apr 2016 10:32:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base />
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Joomla! - Open Source Content Management"/>
+<title>Home Variation 2</title>
+<link href="../../templates/shaper_soccer/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+<link href="../component/search/index31cd.html?Itemid=560&amp;format=opensearch" rel="search" title="Search Shaper Soccer" type="application/opensearchdescription+xml"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/flexslider.css" type="text/css"/>
+<link rel="stylesheet" href="../../components/com_sppagebuilder/assets/css/font-awesome.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../components/com_sppagebuilder/assets/css/animate.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../components/com_sppagebuilder/assets/css/sppagebuilder.css" type="text/css"/>
+<link rel="stylesheet" href="../../modules/mod_sp_news_highlighter/assets/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="../../modules/mod_sp_club_rankings/assets/css/rank-style.css" type="text/css"/>
+<link rel="stylesheet" href="../../modules/mod_sp_soccer_recent_results/assets/css/recent-result.css" type="text/css"/>
+<link rel="stylesheet" href="../../media/com_acymailing/css/module_defaulta6cb.css?v=1431957328" type="text/css"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,900,700,100&amp;greek-ext,latin" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/font-awesome.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/lightbox.css" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/animate.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/legacy.css" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/template.css" type="text/css"/>
+<link rel="stylesheet" href="../../templates/shaper_soccer/css/presets/preset1.css" type="text/css" class="preset"/>
+<style type="text/css">#sp-nh129{color:#666666;background:#f9f9f9}.sp-nh-item{background:#f9f9f9}a.sp-nh-link{color:#047aac}a.sp-nh-link:hover{color:#039ee1}.sp-nh-buttons,.sp-nh-item,.sp-nh-prev,.sp-nh-next{height:30px;line-height:30px}.sp-nh-prev,.sp-nh-next{background-image:url(../../modules/mod_sp_news_highlighter/assets/images/style1.png)}body{font-family:Roboto,sans-serif;font-size:16px;font-weight:normal;}h1{font-family:Roboto,sans-serif;font-weight:900;}h2{font-family:Roboto,sans-serif;font-weight:700;}h3{font-family:Roboto,sans-serif;font-weight:700;}h4{font-family:Roboto,sans-serif;font-weight:700;}h5{font-family:Roboto,sans-serif;font-weight:700;}h6{font-family:Roboto,sans-serif;font-weight:700;}.sp-megamenu-parent{font-family:Roboto,sans-serif;font-size:14px;font-weight:100;}#sp-bottom{color:#ffffff;padding:60px 0 0 0;}#sp-footer{padding:0 0 80px 0;}</style>
+<script src="../../media/jui/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+<script src="../../media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/jquery.flexslider-min.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/jquery.countdown.min.js" type="text/javascript"></script>
+<script src="../../modules/mod_sp_news_highlighter/assets/js/sp_highlighter.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/matchheight.js" type="text/javascript"></script>
+<script src="../../modules/mod_sp_club_rankings/assets/js/club-rank.js" type="text/javascript"></script>
+<script src="../../modules/mod_sp_soccer_recent_results/assets/js/recent-result.js" type="text/javascript"></script>
+<script src="../../media/com_acymailing/js/acymailing_module5df1.js?v=493" type="text/javascript"></script>
+<script src="../../components/com_sppagebuilder/assets/js/sppagebuilder.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/jquery.sticky.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/smoothscroll.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/main.js" type="text/javascript"></script>
+<script src="../../templates/shaper_soccer/js/lightbox.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function ($) {
+	$(document).on('click', '#poll-submit', function () {
+		var value   = $('input[name=question]:checked').val(),
+			request = {
+					'option' : 'com_ajax',
+					'module' : 'sp_soccer_poll',
+					'data'   : value,
+					'format' : 'raw'
+				};
+		$.ajax({
+			type   : 'POST',
+			data   : request,
+			success: function (response) {
+				$('#spsoccer-poll').hide();
+				$('.status').html(response);
+			}
+		});
+		return false;
+	});
+})(jQuery)	var acymailing = Array();
+				acymailing['NAMECAPTION'] = 'Name';
+				acymailing['NAME_MISSING'] = 'Please enter your name';
+				acymailing['EMAILCAPTION'] = 'E-mail';
+				acymailing['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+				acymailing['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+				acymailing['CAPTCHA_MISSING'] = 'Please enter the security code displayed in the image';
+				acymailing['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+  </script>
+<meta content="website" property="og:type"/>
+<meta content="http://demo.joomshaper.com/2015/soccer/index.php/home/home-2" property="og:url"/>
+</head>
+<body class="site com-sppagebuilder view-page no-layout no-task itemid-560 en-gb ltr  sticky-header layout-fluid">
+<div class="body-innerwrapper">
+<header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-2 col-md-2"><div class="sp-column "><a class="logo" href="../../index.html"><h1><img class="sp-default-logo" src="../../templates/shaper_soccer/images/presets/preset1/logo.png" alt="Shaper Soccer"><img class="sp-retina-logo" src="../../templates/shaper_soccer/images/presets/preset1/logo%402x.png" alt="Shaper Soccer" width="119" height="27"></h1></a></div></div><div id="sp-menu" class="col-xs-4 col-sm-8 col-md-8"><div class="sp-column "> <div class='sp-megamenu-wrapper'>
+<a id="offcanvas-toggler" class="visible-xs" href="#"><i class="fa fa-bars"></i></a>
+<ul class="sp-megamenu-parent menu-fade hidden-xs"><li class="sp-menu-item sp-has-child active"><a href="../../index-2.html">Home</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item current-item active"><a href="home-2.html">Home Variation 2</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a href="#">Club List</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../clubs/real-madrid.html">Real Madrid</a></li><li class="sp-menu-item"><a href="../clubs/bercelona.html">Bercelona</a></li><li class="sp-menu-item"><a href="../clubs/arsenal.html">Arsenal</a></li><li class="sp-menu-item"><a href="../clubs/manchester-city.html">Manchester City</a></li><li class="sp-menu-item"><a href="../clubs/metropo.html">Metropo</a></li><li class="sp-menu-item"><a href="../clubs/selvilla.html">Selvilla</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a href="#">Fixtures</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../fixtures/liga-bbva.html">Liga BBVA</a></li><li class="sp-menu-item"><a href="../fixtures/supper-cup.html">Supper Cup</a></li><li class="sp-menu-item"><a href="../fixtures/southern.html">Southern</a></li><li class="sp-menu-item"><a href="../fixtures/uefa.html">UEFA</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a href="#">Results</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../results/liga-bbva.html">LIGA BBVA</a></li><li class="sp-menu-item"><a href="../results/super-cup.html">Super Cup</a></li><li class="sp-menu-item"><a href="../results/southern.html">SOUTHERN</a></li><li class="sp-menu-item"><a href="../results/uefa.html">UEFA</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a href="#">Point Table</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../point-table/liga-bbva.html">Liga BBVA</a></li><li class="sp-menu-item"><a href="../point-table/liga-bbva-2.html">Super Cup</a></li><li class="sp-menu-item"><a href="../point-table/southern.html">Southern</a></li><li class="sp-menu-item"><a href="../point-table/southern-2.html">UEFA</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a href="#">Soccer</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../soccer/tournaments.html">Tournaments</a></li><li class="sp-menu-item"><a href="../soccer/matches.html">Matches</a></li><li class="sp-menu-item"><a href="../soccer/players.html">Players</a></li><li class="sp-menu-item"><a href="../soccer/teams.html">Teams</a></li><li class="sp-menu-item"><a href="../soccer/tournament-details.html">Tournament Details</a></li><li class="sp-menu-item"><a href="../soccer/match-details.html">Match Details</a></li><li class="sp-menu-item"><a href="../soccer/team-details.html">Team Details</a></li><li class="sp-menu-item"><a href="../soccer/tournament-results.html">Tournament Results</a></li><li class="sp-menu-item"><a href="../soccer/fixture.html">Fixture</a></li><li class="sp-menu-item"><a href="../soccer/point-table.html">Point Table</a></li></ul></div></div></li><li class="sp-menu-item sp-has-child"><a href="#">Pages</a><div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../../index114a.html?tmpl=comingsoon">Coming Soon</a></li><li class="sp-menu-item"><a href="../component/404/index46e3.html?Itemid=488">404 Page</a></li><li class="sp-menu-item"><a href="../pages/blog.html">Soccer News</a></li><li class="sp-menu-item sp-has-child"><a href="#">Joomla!</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-full container" style=""><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-3"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="#">Content Component</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a href="../pages/joomla/content-component/single-article.html">Single Article</a></li><li class="sp-menu-item"><a href="../pages/joomla/content-component/article-category-blog.html">Article Category Blog</a></li><li class="sp-menu-item"><a href="../pages/joomla/content-component/article-category-list.html">Article Category List</a></li><li class="sp-menu-item"><a href="../pages/joomla/content-component/featured-articles.html">Featured Articles</a></li></ul></li></ul></div><div class="col-sm-3"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="#">Contact Component</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a href="../pages/joomla/contact-component/contact-categories.html">Contact Categories</a></li><li class="sp-menu-item"><a href="../pages/joomla/contact-component/contact-single-category.html">Contact Single Category</a></li><li class="sp-menu-item"><a href="../pages/joomla/contact-component/single-contact.html">Single Contact</a></li><li class="sp-menu-item"><a href="../pages/joomla/contact-component/featured-contacts.html">Featured Contacts</a></li></ul></li></ul></div><div class="col-sm-3"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="#">Users Component</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a href="../pages/joomla/users-component/login-form.html">Login Form</a></li><li class="sp-menu-item"><a href="../pages/joomla/users-component/login-form.html">User Profile</a></li><li class="sp-menu-item"><a href="../pages/joomla/users-component/login-form.html">Edit User Profile</a></li><li class="sp-menu-item"><a href="../pages/joomla/users-component/registration-form.html">Registration Form</a></li></ul></li></ul></div><div class="col-sm-3"><ul class="sp-mega-group"><li class="sp-menu-item sp-has-child"><a class="sp-group-title" href="#">Other Components</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item sp-has-child"><a href="../pages/joomla/other-components/news-feeds-component.html">News Feeds Component</a><div class="sp-dropdown sp-dropdown-sub sp-menu-right" style="width: 240px;left: -240px;"><div class="sp-dropdown-inner"><ul class="sp-dropdown-items"><li class="sp-menu-item"><a href="../pages/joomla/other-components/news-feeds-component/new-feed-categories.html">News Feed Categories</a></li><li class="sp-menu-item"><a href="../pages/joomla/other-components/news-feeds-component/single-news-feed.html">Single News Feed</a></li><li class="sp-menu-item"><a href="../pages/joomla/other-components/news-feeds-component/news-feed-category.html">News Feed Category</a></li></ul></div></div></li><li class="sp-menu-item"><a href="../pages/joomla/other-components/search-component.html">Search Components</a></li><li class="sp-menu-item"><a href="../pages/joomla/other-components/smart-search.html">Smart Search</a></li><li class="sp-menu-item"><a href="../pages/joomla/other-components/search.html">Search</a></li></ul></li></ul></div></div></div></div></li></ul></div></div></li></ul> </div>
+</div></div><div id="sp-user-menu" class="col-sm-2 col-md-2"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><ul class="nav menu soccer-login">
+<li class="item-588"><a href="../pages/joomla/users-component/login-form.html">Sign Up / Sign In</a></li></ul>
+</div></div></div></div></div></div></header><section id="sp-secondery-menu"><div class="container"><div class="row"><div id="sp-category-menu" class="col-sm-9 col-md-9"><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><ul class="nav menu secondary-menu">
+<li class="item-546 deeper parent"><a href="../liga-bbva.html">LIGA BBVA</a><ul class="nav-child unstyled small"><li class="item-552"><a href="../liga-bbva/matches.html">Matches</a></li><li class="item-576"><a href="../liga-bbva/copa-result.html">Result</a></li></ul></li><li class="item-547 deeper parent"><a href="../uefa.html"> UEFA</a><ul class="nav-child unstyled small"><li class="item-578"><a href="../uefa/matches.html">Matches</a></li><li class="item-579"><a href="../uefa/result.html">Result</a></li></ul></li><li class="item-548 deeper parent"><a href="../epl.html"> EPL</a><ul class="nav-child unstyled small"><li class="item-580"><a href="../epl/match.html">Match</a></li><li class="item-581"><a href="../epl/result.html">Result</a></li></ul></li><li class="item-549 deeper parent"><a href="../super-cup.html"> SUPER CUP</a><ul class="nav-child unstyled small"><li class="item-582"><a href="../super-cup/match.html">Match</a></li><li class="item-583"><a href="../super-cup/result.html">Result</a></li></ul></li><li class="item-550 deeper parent"><a href="../2015-05-28-08-26-20.html"> NPL</a><ul class="nav-child unstyled small"><li class="item-585"><a href="../2015-05-28-08-26-20/match.html">Match</a></li><li class="item-584"><a href="../2015-05-28-08-26-20/result.html">Result</a></li></ul></li><li class="item-551 deeper parent"><a href="../southern.html"> SOUTHERN</a><ul class="nav-child unstyled small"><li class="item-586"><a href="../southern/match.html">Match</a></li><li class="item-587"><a href="../southern/result.html">Result</a></li></ul></li></ul>
+</div></div></div></div><div id="sp-search" class="col-sm-3 col-md-3"><div class="sp-column "><div class="sp-module  soccer-search"><div class="sp-module-content"><div class="search soccer-search">
+<form action="http://demo.joomshaper.com/2015/soccer/index.php/home/home-2" method="post">
+<input name="searchword" id="mod-search-searchword" maxlength="200" class="inputbox search-query" type="text" size="20" placeholder="Search ..."/> <input type="hidden" name="task" value="search"/>
+<input type="hidden" name="option" value="com_search"/>
+<input type="hidden" name="Itemid" value="560"/>
+</form>
+</div>
+</div></div></div></div></div></div></section><section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "></div></div></div></section><section id="sp-main-body"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">
+</div>
+<script type="text/javascript">
+jQuery(function($) {
+	//variable
+	var $sppbUmCountDown  = $('#sppb-um-match-countdown'),
+	    $umCountDownDate  = $sppbUmCountDown.data('umcountdown');
+	    $umCountDownOver  = $sppbUmCountDown.data('umcountdownover');
+
+	//Countdown function
+	$sppbUmCountDown.countdown( $umCountDownDate, function(event) {
+        $(this).html(event.strftime('<li class="days"><span class="number">%-D</span><span class="string">%!D:Day,Days;</span></li><li class="hours"><span class="number">%H</span><span class="string">%!H:Hour,Hours;</span></li><li class="minutes"><span class="number">%M</span><span class="string">%!M:Minute,Minutes;</span></li><li class="seconds"><span class="number">%S</span><span class="string">%!S:Second,Seconds;</span></li>'));
+    });
+	
+	// if countdown is finished
+    $sppbUmCountDown.on('finish.countdown', function(event) {
+	   $(this).html( $umCountDownOver )
+	     .parent().addClass('disabled')
+	 });
+
+});
+</script>
+<div id="sp-page-builder" class="sp-page-builder  page-11">
+<div class="page-content">
+<section class="sppb-section " style=""><div class="sppb-row"><div class="sppb-col-sm-12"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-soccer-slider"><div class="sppb-addon-soccer-slider-content"><div id="sppb-slider2-carousel" class="carousel slide" data-ride="carousel"><div class="slider2-carousel-indicators hidden-xs"><ul class="slider2-carousel-indicators-inner carousel-indicators" tabindex="0"><li data-target="#sppb-slider2-carousel" data-slide-to="0" class="text-right active"><span class="slide2-type">LIGA BBVA</span><span class="indicators-title"> Chelsea vs paris </span></li><li data-target="#sppb-slider2-carousel" data-slide-to="1" class="text-right "><span class="slide2-type">LIGA BBVA</span><span class="indicators-title"> Manchester vs bayen </span></li><li data-target="#sppb-slider2-carousel" data-slide-to="2" class="text-right "><span class="slide2-type"> SUPER CUP</span><span class="indicators-title"> England vs France </span></li><li data-target="#sppb-slider2-carousel" data-slide-to="3" class="text-right "><span class="slide2-type">LIGA BBVA</span><span class="indicators-title"> Chelsea vs paris </span></li><li data-target="#sppb-slider2-carousel" data-slide-to="4" class="text-right "><span class="slide2-type"> SUPER CUP</span><span class="indicators-title"> England vs France </span></li></ul></div><div class="carousel-inner" role="listbox"><div class="item active" style="background: url(../../images/demo/slider/slider1.jpg) no-repeat;"><div class="container"><div class="col-md-6 col-sm-8 col-xs-12 next-match"><div class="slider2-title"><span>LIGA BBVA</span></div><div class="slider2-box"><div class="row"><div class="col-xs-5"><div class="text-left  slider2-logo media"><img class="pull-left" width="50" src="../../images/demo/team-logo/7.png" alt="Arsenal"><div class="media-body"><h3>Arsenal</h3></div></div></div><div class="slider2-time col-xs-2"><span class="goal">06 Oct 05:30</span></div><div class="col-xs-5"><div class="text-right  slider2-logo media"><img class="pull-right" width="50" src="../../images/demo/team-logo/2.png" alt="Metropo"><div class="media-body"><h3>Metropo</h3></div></div></div></div></div></div></div></div><div class="item " style="background: url(../../images/demo/slider/slider2.jpg) no-repeat;"><div class="container"><div class="col-md-6 col-sm-8 col-xs-12 next-match"><div class="slider2-title"><span>LIGA BBVA</span></div><div class="slider2-box"><div class="row"><div class="col-xs-5"><div class="text-left  slider2-logo media"><img class="pull-left" width="50" src="../../images/demo/team-logo/7.png" alt="Arsenal"><div class="media-body"><h3>Arsenal</h3></div></div></div><div class="slider2-time col-xs-2"><span class="goal">06 Oct 05:30</span></div><div class="col-xs-5"><div class="text-right  slider2-logo media"><img class="pull-right" width="50" src="../../images/demo/team-logo/2.png" alt="Metropo"><div class="media-body"><h3>Metropo</h3></div></div></div></div></div></div></div></div><div class="item " style="background: url(../../images/demo/slider/slider2.jpg) no-repeat;"><div class="container"><div class="col-md-6 col-sm-8 col-xs-12 next-match"><div class="slider2-title"><span> SUPER CUP</span></div><div class="slider2-box"><div class="row"><div class="col-xs-5"><div class="text-left  slider2-logo media"><img class="pull-left" width="50" src="../../images/demo/team-logo/4.png" alt="England"><div class="media-body"><h3>England</h3></div></div></div><div class="slider2-time col-xs-2"><span class="goal">15 Jun 16:40</span></div><div class="col-xs-5"><div class="text-right  slider2-logo media"><img class="pull-right" width="50" src="../../images/demo/team-logo/5.png" alt="France"><div class="media-body"><h3>France</h3></div></div></div></div></div></div></div></div><div class="item " style="background: url(../../images/demo/slider/slider1.jpg) no-repeat;"><div class="container"><div class="col-md-6 col-sm-8 col-xs-12 next-match"><div class="slider2-title"><span>LIGA BBVA</span></div><div class="slider2-box"><div class="row"><div class="col-xs-5"><div class="text-left  slider2-logo media"><img class="pull-left" width="50" src="../../images/demo/team-logo/7.png" alt="Arsenal"><div class="media-body"><h3>Arsenal</h3></div></div></div><div class="slider2-time col-xs-2"><span class="goal">06 Oct 05:30</span></div><div class="col-xs-5"><div class="text-right  slider2-logo media"><img class="pull-right" width="50" src="../../images/demo/team-logo/2.png" alt="Metropo"><div class="media-body"><h3>Metropo</h3></div></div></div></div></div></div></div></div><div class="item " style="background: url(../../images/demo/slider/slider1.jpg) no-repeat;"><div class="container"><div class="col-md-6 col-sm-8 col-xs-12 next-match"><div class="slider2-title"><span> SUPER CUP</span></div><div class="slider2-box"><div class="row"><div class="col-xs-5"><div class="text-left  slider2-logo media"><img class="pull-left" width="50" src="../../images/demo/team-logo/4.png" alt="England"><div class="media-body"><h3>England</h3></div></div></div><div class="slider2-time col-xs-2"><span class="goal">15 Jun 16:40</span></div><div class="col-xs-5"><div class="text-right  slider2-logo media"><img class="pull-right" width="50" src="../../images/demo/team-logo/5.png" alt="France"><div class="media-body"><h3>France</h3></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></section><section class="sppb-section  soccer-news-highlighter" style="margin:0px;"><div class="sppb-container"><div class="sppb-row"><div class="sppb-col-sm-2"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-text-block sppb-text-left  news-highlighter-text"><div class="sppb-addon-content">Breaking News</div></div></div></div><div class="sppb-col-sm-10"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-module "><div class="sppb-addon-content"><script type="text/javascript">
+	jQuery(function($) {
+		$('#sp-nh129').spNewsHighlighter({
+			'interval': 5000,
+            'fxduration': 1000,
+            'animation': "slide-vertical"
+		});
+	});
+</script>
+<div id="sp-nh129" class="sp_news_higlighter">
+<div id="sp-nh-items129" class="sp-nh-item">
+<div class="sp-nh-item">
+<a class="sp-nh-link" href="../pages/joomla/content-component/article-category-blog/77-see-the-new-miss-universe-get-her-crown.html"><span class="sp-nh-title">See the new Miss Universe get her crown</span> - <span class="sp-nh-date">Monday, 02 February 2015 20:29</span></a>
+</div>
+<div class="sp-nh-item">
+<a class="sp-nh-link" href="../pages/blog/87-rosler-set-to-become-leeds-head-coach-2.html"><span class="sp-nh-title">The hosts blasted their way through</span> - <span class="sp-nh-date">Wednesday, 20 May 2015 10:53</span></a>
+</div>
+<div class="sp-nh-item">
+<a class="sp-nh-link" href="../pages/blog/88-newcastle-fans-plan-to-occupy-st-james-park-2.html"><span class="sp-nh-title">Newcastle fans plan to 'occupy' St James' Park</span> - <span class="sp-nh-date">Wednesday, 20 May 2015 10:52</span></a>
+</div>
+<div class="sp-nh-item">
+<a class="sp-nh-link" href="../pages/blog/89-did-suarez-bale-define-barca-real-seasons-3.html"><span class="sp-nh-title">Tabárez: Quarter-final against Chile is special</span> - <span class="sp-nh-date">Wednesday, 20 May 2015 10:50</span></a>
+</div>
+<div class="sp-nh-item">
+<a class="sp-nh-link" href="../pages/blog/90-de-gea-to-real-is-a-logical-move-2.html"><span class="sp-nh-title">'De Gea to Real is a logical move to St James' Park</span> - <span class="sp-nh-date">Wednesday, 20 May 2015 10:48</span></a>
+</div>
+</div>
+<div class="sp-nh-buttons">
+<div id="sp-nh-prev129" class="sp-nh-prev">
+<i class="fa fa-angle-left"></i>
+</div>
+<div id="sp-nh-next129" class="sp-nh-next">
+<i class="fa fa-angle-right"></i>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+</div></div></div></div></div></div></section><section class="sppb-section " style=""><div class="sppb-container"><div class="sppb-row"><div class="sppb-col-sm-5"><div class="sppb-addon-container soccer-highlights soccer-twitter-feed-2" style=""><div class="sppb-addon sppb-addon-latest-posts soccer-title-icon orderby-hits post-type-all layout_two"><div class="sppb-section-title soccer-latest-post-title"><h3 class="sppb-addon-title">Soccer Highlights</h3></div><div class="sppb-addon-content"><div class="latest-posts clearfix"><div class="sppb-row"><div class="latest-post leading-item sppb-col-sm-12 "><div class="latest-post-inner"><a href="../pages/blog/87-recent-video/96-hat-trick-hero-guerrero-gears-up-for-chile.html"><div class="background-img "><div><div style="background-image: url(../../images/demo/blog/1.jpg)"></div></div></div></a><div class="post-info"><div class="post-category"> <a href="../pages/blog/87-recent-video.html"> <span class="entry-category"> Recent Video</span> </a></div><h3 class="entry-title"><a href="../pages/blog/87-recent-video/96-hat-trick-hero-guerrero-gears-up-for-chile.html">Hat trick hero Guerrero gears up for Chile</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>26 June 2015</span></div></div></div></div><div class="latest-post sub-item sppb-col-sm-12 "><div class="latest-post-inner match-height"><div class="post-info"><div class="post-category"> <a href="../pages/blog/87-recent-video.html"> <span class="entry-category"> Recent Video</span> </a></div><h3 class="entry-title"><a href="../pages/blog/87-recent-video/95-amazing-soccer-goals-and-saves.html">Amazing Soccer Goals and Saves</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>26 June 2015</span></div></div></div></div><div class="latest-post sub-item sppb-col-sm-12 "><div class="latest-post-inner match-height"><div class="post-info"><div class="post-category"> <a href="../pages/blog.html"> <span class="entry-category"> Soccer</span> </a></div><h3 class="entry-title"><a href="../pages/blog/85-ramsey-given-head-coach-job-at-qpr.html">Ramsey given head coach job at QPR</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>20 May 2015</span></div></div></div></div><div class="latest-post sub-item sppb-col-sm-12 "><div class="latest-post-inner match-height"><div class="post-info"><div class="post-category"> <a href="../pages/blog/87-recent-video.html"> <span class="entry-category"> Recent Video</span> </a></div><h3 class="entry-title"><a href="../pages/blog/87-recent-video/94-golden-eaglets-soar-to-fourth-crown.html">River stumble as Cruzeiro fly high</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>26 May 2015</span></div></div></div></div><div class="latest-post sub-item sppb-col-sm-12 "><div class="latest-post-inner match-height"><div class="post-info"><div class="post-category"> <a href="../pages/blog.html"> <span class="entry-category"> Soccer</span> </a></div><h3 class="entry-title"><a href="../pages/blog/87-rosler-set-to-become-leeds-head-coach-2.html">The hosts blasted their way through</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>20 May 2015</span></div></div></div></div></div></div></div></div><div class="sppb-addon sppb-addon-single-image sppb-text-left "><div class="sppb-addon-content"><a target="" href="#"><img class="sppb-img-responsive" src="../../images/demo/homepage-ad1.jpg" alt=""></a></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-tweet   soccer-title-icon" style="background-image: url('../../images/demo/twitter-bg.jpg')"><h3 class="sppb-addon-title" style="margin-bottom:30px;color:#ffffff;font-size:24px;line-height:24px;">Twitter Feed</h3><div class=" sppb-tweet-slider"><div class="sppb-item"><div class="row"><div class="sppb-tweet-text col-sm-9">[New] Graxpo - Bootstrap One Page Creative Business, Agency and Portfolio Template <a href="https://t.co/LcOeVvmdWk" target="_blank">https://t.co/LcOeVvmdWk</a> <a href="https://t.co/irnrh9G4RH" target="_blank">https://t.co/irnrh9G4RH</a></div><small class="sppb-tweet-created col-sm-3">2 Days Ago</small></div></div><div class="sppb-item"><div class="row"><div class="sppb-tweet-text col-sm-9">[New] A-Dashboard admin template <a href="https://t.co/amiQpKv2rz" target="_blank">https://t.co/amiQpKv2rz</a> <a href="https://t.co/S5QsYDgHdt" target="_blank">https://t.co/S5QsYDgHdt</a></div><small class="sppb-tweet-created col-sm-3">2 Days Ago</small></div></div><div class="sppb-item"><div class="row"><div class="sppb-tweet-text col-sm-9">7 free sources to learn CSS easily → <a href="https://t.co/uk7qYg9veL" target="_blank">https://t.co/uk7qYg9veL</a>
+<a href="http://twitter.com/search?q=%23CSS" target="_blank">#CSS</a> <a href="http://twitter.com/search?q=%23Web" target="_blank">#Web</a> <a href="http://twitter.com/search?q=%23Free" target="_blank">#Free</a> <a href="http://twitter.com/search?q=%23webdesign" target="_blank">#webdesign</a> <a href="https://t.co/klTwPf61pS" target="_blank">https://t.co/klTwPf61pS</a></div><small class="sppb-tweet-created col-sm-3">4 Days Ago</small></div></div><div class="sppb-item"><div class="row"><div class="sppb-tweet-text col-sm-9">[Weekly Featured] CleaThin - Clean and Minimal Site Template <a href="https://t.co/b8zynxL5yT" target="_blank">https://t.co/b8zynxL5yT</a> <a href="https://t.co/8QNrMnwlyT" target="_blank">https://t.co/8QNrMnwlyT</a></div><small class="sppb-tweet-created col-sm-3">5 Days Ago</small></div></div><div class="sppb-item"><div class="row"><div class="sppb-tweet-text col-sm-9">Introducing IcoFont: The free & open source icon font from ShapeBootstrap → <a href="https://t.co/J7QvKwy6jH" target="_blank">https://t.co/J7QvKwy6jH</a>
+<a href="http://twitter.com/search?q=%23Icons" target="_blank">#Icons</a> <a href="http://twitter.com/search?q=%23Fonts" target="_blank">#Fonts</a> <a href="https://t.co/DFs4tNxjHV" target="_blank">https://t.co/DFs4tNxjHV</a></div><small class="sppb-tweet-created col-sm-3">9 Days Ago</small></div></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-latest-posts soccer-title-icon orderby-featured post-type-all layout_one"><div class="sppb-section-title soccer-latest-post-title"><h3 class="sppb-addon-title">Featured Stories</h3></div><div class="sppb-addon-content"><div class="latest-posts clearfix"><div class="sppb-row-fluid"><div id="carousel-lp-featured" class="carousel slide" data-ride="lp-featured-carousel"><div class="carousel-inner" role="listbox"><div class="latest-post leading-item item active "><div class="latest-post-inner match-height"><div class="sppb-lp-featured-overlay-wrap no"><a href="../pages/blog/85-latest-news/78-harry-kanekane-in-england-under-21-squad.html"><div class="background-img "><div><img src="../../images/demo/blog/3.jpg" class="img-responsive sppb-post-image" alt="Harry KaneKane in England Under-21 squad"></div></div></a></div><h3 class="entry-title"><a href="../pages/blog/85-latest-news/78-harry-kanekane-in-england-under-21-squad.html">Harry KaneKane in England Under-21 squad</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>20 May 2015</span></div><div class="featured-item-content">Arsenal edged slightly closer to the Barclays Premier League’s two with a commanding victory over West Ham United on the weekend.
+Arsene Wenger’s Gunners picked up their eighth league win in nine outings with a 3-0 home result over the Hammers thanks to goals from Olivier Giroud, Aaron Ramsey and Mathieu Flamini to move within a point of second-placed Manchester City and seven of league leaders Chelsea. Reigning premiers City were dealt a massive title blow when losing 1-0 to relegation battlers Burnley at Turf Moor which came via a stunning strike from George Boyd in the 61st...</div></div></div><div class="latest-post leading-item item  "><div class="latest-post-inner match-height"><div class="sppb-lp-featured-overlay-wrap no"><a href="../pages/blog/85-latest-news/79-sterling-booed-while-receiving-reds-award.html"><div class="background-img "><div><img src="../../images/demo/blog/2.jpg" class="img-responsive sppb-post-image" alt="Sterling booed while receiving Reds award"></div></div></a></div><h3 class="entry-title"><a href="../pages/blog/85-latest-news/79-sterling-booed-while-receiving-reds-award.html">Sterling booed while receiving Reds award</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>20 May 2015</span></div><div class="featured-item-content">Arsenal edged slightly closer to the Barclays Premier League’s two with a commanding victory over West Ham United on the weekend.
+Arsene Wenger’s Gunners picked up their eighth league win in nine outings with a 3-0 home result over the Hammers thanks to goals from Olivier Giroud, Aaron Ramsey and Mathieu Flamini to move within a point of second-placed Manchester City and seven of league leaders Chelsea. Reigning premiers City were dealt a massive title blow when losing 1-0 to relegation battlers Burnley at Turf Moor which came via a stunning strike from George Boyd in the 61st...</div></div></div><div class="latest-post leading-item item  "><div class="latest-post-inner match-height"><div class="sppb-lp-featured-overlay-wrap no"><a href="../pages/blog/85-latest-news/80-de-gea-to-real-is-a-logical-move.html"><div class="background-img "><div><img src="../../images/demo/blog/12.jpg" class="img-responsive sppb-post-image" alt="'De Gea to Real is a logical move to St James' Park"></div></div></a></div><h3 class="entry-title"><a href="../pages/blog/85-latest-news/80-de-gea-to-real-is-a-logical-move.html">'De Gea to Real is a logical move to St James' Park</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>20 May 2015</span></div><div class="featured-item-content">Arsenal edged slightly closer to the Barclays Premier League’s two with a commanding victory over West Ham United on the weekend.
+Arsene Wenger’s Gunners picked up their eighth league win in nine outings with a 3-0 home result over the Hammers thanks to goals from Olivier Giroud, Aaron Ramsey and Mathieu Flamini to move within a point of second-placed Manchester City and seven of league leaders Chelsea. Reigning premiers City were dealt a massive title blow when losing 1-0 to relegation battlers Burnley at Turf Moor which came via a stunning strike from George Boyd in the 61st...</div></div></div><div class="latest-post leading-item item  "><div class="latest-post-inner match-height"><div class="sppb-lp-featured-overlay-wrap no"><a href="../pages/blog/85-latest-news/82-did-suarez-bale-define-barca-real-seasons-2.html"><div class="background-img "><div><img src="../../images/demo/blog/11.jpg" class="img-responsive sppb-post-image" alt="Did Suarez & Bale define Barca & Real seasons?"></div></div></a></div><h3 class="entry-title"><a href="../pages/blog/85-latest-news/82-did-suarez-bale-define-barca-real-seasons-2.html">Did Suarez & Bale define Barca & Real seasons?</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>20 May 2015</span></div><div class="featured-item-content">Arsenal edged slightly closer to the Barclays Premier League’s two with a commanding victory over West Ham United on the weekend.
+Arsene Wenger’s Gunners picked up their eighth league win in nine outings with a 3-0 home result over the Hammers thanks to goals from Olivier Giroud, Aaron Ramsey and Mathieu Flamini to move within a point of second-placed Manchester City and seven of league leaders Chelsea. Reigning premiers City were dealt a massive title blow when losing 1-0 to relegation battlers Burnley at Turf Moor which came via a stunning strike from George Boyd in the 61st...</div></div></div></div><div class="tp-controls"><a class="left lp-featured-control" href="#carousel-lp-generic" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a><a class="right lp-featured-control" href="#carousel-lp-generic" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a></div></div></div></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div><div class="sppb-addon sppb-thumb-gallery-wrapper sppb-addon-thumb-gallery soccer-title-icon sports-gallery-variation-2"><h3 class="sppb-addon-title" style="">Sports Gallery</h3><div id="slider" class="flexslider sppb-tg-slider" data-sppb-tg-autoplay="true" data-sppb-tg-arrows="true"><ul class="slides"><li> <img src="../../images/demo/thumb-gallery/gallery-1.jpg" alt="Gallery-1"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-2.jpg" alt="Gallery-2"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-3.jpg" alt="Gallery-3"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-4.jpg" alt="Gallery-4"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-5.jpg" alt="Gallery-5"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-6.jpg" alt="Gallery-6"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-7.jpg" alt="Gallery-7"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-8.jpg" alt="Gallery-8"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-9.jpg" alt="Gallery-9"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-10.jpg" alt="Gallery-10"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-11.jpg" alt="Gallery-11"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-12.jpg" alt="Gallery-12"/> </li></ul></div><div id="carousel" class="flexslider"><ul class="slides"><li> <img src="../../images/demo/thumb-gallery/gallery-1.jpg" alt="Gallery-1"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-2.jpg" alt="Gallery-2"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-3.jpg" alt="Gallery-3"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-4.jpg" alt="Gallery-4"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-5.jpg" alt="Gallery-5"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-6.jpg" alt="Gallery-6"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-7.jpg" alt="Gallery-7"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-8.jpg" alt="Gallery-8"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-9.jpg" alt="Gallery-9"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-10.jpg" alt="Gallery-10"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-11.jpg" alt="Gallery-11"/> </li><li> <img src="../../images/demo/thumb-gallery/gallery-12.jpg" alt="Gallery-12"/> </li></ul></div></div></div></div><div class="sppb-col-sm-4"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-latest-posts  orderby-latest post-type-all layout_two"><div class="sppb-section-title soccer-latest-post-title"><h3 class="sppb-addon-title">Popular Post</h3></div><div class="sppb-addon-content"><div class="latest-posts clearfix"><div class="sppb-row"><div class="latest-post sub-item sppb-col-sm-12"><div class="latest-post-inner match-height"><div class="sppb-row"><div class="latest-image col-md-5 col-sm-12"><a href="../pages/blog/87-recent-video/96-hat-trick-hero-guerrero-gears-up-for-chile.html"><div class="background-img "><div><div style="background-image: url(../../images/demo/blog/1.jpg)"></div></div></div></a></div><div class="latest-news-details col-md-7 col-sm-12"><div class="post-category"><a href="../pages/blog/87-recent-video.html"><span class="entry-category"> Recent Video</span></a></div><h3 class="entry-title"><a href="../pages/blog/87-recent-video/96-hat-trick-hero-guerrero-gears-up-for-chile.html">Hat trick hero Guerrero gears up for Chile</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>26 June 2015</span></div></div></div></div></div><div class="latest-post sub-item sppb-col-sm-12"><div class="latest-post-inner match-height"><div class="sppb-row"><div class="latest-image col-md-5 col-sm-12"><a href="../pages/blog/87-recent-video/95-amazing-soccer-goals-and-saves.html"><div class="background-img "><div><div style="background-image: url(../../images/demo/blog/10.jpg)"></div></div></div></a></div><div class="latest-news-details col-md-7 col-sm-12"><div class="post-category"><a href="../pages/blog/87-recent-video.html"><span class="entry-category"> Recent Video</span></a></div><h3 class="entry-title"><a href="../pages/blog/87-recent-video/95-amazing-soccer-goals-and-saves.html">Amazing Soccer Goals and Saves</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>26 June 2015</span></div></div></div></div></div><div class="latest-post sub-item sppb-col-sm-12"><div class="latest-post-inner match-height"><div class="sppb-row"><div class="latest-image col-md-5 col-sm-12"><a href="../pages/blog/87-recent-video/94-golden-eaglets-soar-to-fourth-crown.html"><div class="background-img "><div><div style="background-image: url(../../images/demo/blog/11.jpg)"></div></div></div></a></div><div class="latest-news-details col-md-7 col-sm-12"><div class="post-category"><a href="../pages/blog/87-recent-video.html"><span class="entry-category"> Recent Video</span></a></div><h3 class="entry-title"><a href="../pages/blog/87-recent-video/94-golden-eaglets-soar-to-fourth-crown.html">River stumble as Cruzeiro fly high</a></h3><div class="entry-meta"><span class="entry-author"> <i class="fa fa-edit"></i> Super User</span><span class="entry-date"> <i class="fa fa-calendar-o"></i>26 May 2015</span></div></div></div></div></div></div></div></div></div><div class="sppb-addon sppb-addon-latest-posts  soccer-title-icon orderby-hits post-type-video layout_two"><div class="sppb-section-title soccer-latest-post-title"><h3 class="sppb-addon-title">Recent Video</h3></div><div class="sppb-addon-content"><div class="latest-posts clearfix"><div class="sppb-row"><div class="latest-video sub-item sppb-col-sm-6 layout_two"><div class="latest-video-inner"><div class="sppb-video-post-item"><div class="sppb-default-wrapper sppb-video-post-wrapper sppb-overlay-wrap background-img "><a href="../pages/blog/87-recent-video/96-hat-trick-hero-guerrero-gears-up-for-chile.html"><img width="360" height="235" src="../../images/demo/blog/1.jpg" class="img-responsive sppb-post-image" alt="Hat trick hero Guerrero gears up for Chile"><i class="fa fa-play"></i></a></div><div class="sppb-default-intro sppb-video-post-intro"><div class="sppb-overlay-inner"><h3 class="entry-title"><a href="../pages/blog/87-recent-video/96-hat-trick-hero-guerrero-gears-up-for-chile.html">Hat trick hero Guerrero gears up for Chile</a></h3></div></div></div></div></div><div class="latest-video sub-item sppb-col-sm-6 layout_two"><div class="latest-video-inner"><div class="sppb-video-post-item"><div class="sppb-default-wrapper sppb-video-post-wrapper sppb-overlay-wrap background-img "><a href="../pages/blog/87-recent-video/95-amazing-soccer-goals-and-saves.html"><img width="360" height="235" src="../../images/demo/blog/10.jpg" class="img-responsive sppb-post-image" alt="Amazing Soccer Goals and Saves"><i class="fa fa-play"></i></a></div><div class="sppb-default-intro sppb-video-post-intro"><div class="sppb-overlay-inner"><h3 class="entry-title"><a href="../pages/blog/87-recent-video/95-amazing-soccer-goals-and-saves.html">Amazing Soccer Goals and Saves</a></h3></div></div></div></div></div><div class="latest-video sub-item sppb-col-sm-6 layout_two"><div class="latest-video-inner"><div class="sppb-video-post-item"><div class="sppb-default-wrapper sppb-video-post-wrapper sppb-overlay-wrap background-img "><a href="../pages/blog/87-recent-video/94-golden-eaglets-soar-to-fourth-crown.html"><img width="360" height="235" src="../../images/demo/blog/11.jpg" class="img-responsive sppb-post-image" alt="River stumble as  Cruzeiro fly high"><i class="fa fa-play"></i></a></div><div class="sppb-default-intro sppb-video-post-intro"><div class="sppb-overlay-inner"><h3 class="entry-title"><a href="../pages/blog/87-recent-video/94-golden-eaglets-soar-to-fourth-crown.html">River stumble as Cruzeiro fly high</a></h3></div></div></div></div></div><div class="latest-video sub-item sppb-col-sm-6 layout_two"><div class="latest-video-inner"><div class="sppb-video-post-item"><div class="sppb-default-wrapper sppb-video-post-wrapper sppb-overlay-wrap background-img "><a href="../pages/blog/87-recent-video/93-brazilian-pair-collect-tough-wins.html"><img width="360" height="235" src="../../images/demo/blog/12.jpg" class="img-responsive sppb-post-image" alt="Brazilian pair collect tough wins"><i class="fa fa-play"></i></a></div><div class="sppb-default-intro sppb-video-post-intro"><div class="sppb-overlay-inner"><h3 class="entry-title"><a href="../pages/blog/87-recent-video/93-brazilian-pair-collect-tough-wins.html">Brazilian pair collect tough wins</a></h3></div></div></div></div></div></div></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-single-image sppb-text-left "><div class="sppb-addon-content"><a target="" href="#"><img class="sppb-img-responsive" src="../../images/demo/blog-right-ad.jpg" alt=""></a></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-top-player-wrapper  soccer-title-icon"><div class="sppb-addon-title-wrapper  soccer-title-icon"><h3 class="sppb-addon-title">Top Player</h3></div><div id="carousel-tp" class="carousel slide" data-ride="tp-carousel"><div class="carousel-inner" role="listbox"><div class="item active"><a href="../soccer/players/1-emre-can.html"><img class="img-responsive" src="../../images/demo/player/player1.jpg" alt="England"><p class="tp-player-name">Emre Can <small> Diffender </small></p></a></div><div class="item "><a href="../soccer/players/2-lionel-messi.html"><img class="img-responsive" src="../../images/demo/player/player3.jpg" alt="England"><p class="tp-player-name">Lionel Messi <small> Goal Kepper </small></p></a></div><div class="item "><a href="../soccer/players/3-cristiano-ronald.html"><img class="img-responsive" src="../../images/demo/player/player4.jpg" alt="England"><p class="tp-player-name">Cristiano Ronaldo <small> Forward </small></p></a></div></div><div class="tp-controls"><a class="left tp-control" href="javascript:void(0);" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a><a class="right tp-control" href="javascript:void(0);" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-single-image sppb-text-left "><div class="sppb-addon-content"><a target="" href="#"><img class="sppb-img-responsive" src="../../images/demo/homepage-ad2.jpg" alt=""></a></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-module soccer-poll soccer-title-icon"><h3 class="sppb-addon-title" style="">Soccer Poll</h3><div class="sppb-addon-content">
+<div class="spsoccer-module-poll ">
+<h3>Cras justo odio, dapisonec elit non mi porta gravida curab blait tempus?</h3>
+<form id="spsoccer-poll">
+<ul>
+<li><input type="radio" name="question" value="4">Messi</li>
+<li><input type="radio" name="question" value="5">Bele</li>
+<li><input type="radio" name="question" value="6">Benzama</li>
+<li><input type="radio" name="question" value="8">Noyen</li>
+<li><input type="radio" name="question" value="7">Roben</li>
+<li><input type="radio" name="question" value="9">Naymer</li>
+</ul>
+<input type="submit" id="poll-submit"/>
+</form>
+</div>
+<div class="status"></div></div></div></div></div><div class="sppb-col-sm-3"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-module  soccer-black-sidebar  soccer-title-icon"><h3 class="sppb-addon-title" style="font-size:24px;line-height:24px;font-weight:700;">Club Rankings</h3><div class="sppb-addon-content">
+<div class="sp-club-rankings ">
+<div id="carousel-rank" class="carousel slide" data-ride="rank-carousel">
+ 
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<ul>
+<li>
+<span>
+1 <img class="img-responsive" src="../../images/demo/team-logo/2.png" alt="England">
+Metropo </span>
+<span class="pull-right">82</span>
+</li>
+<li>
+<span>
+2 <img class="img-responsive" src="../../images/demo/team-logo/2.png" alt="England">
+Metropo </span>
+<span class="pull-right">80</span>
+</li>
+<li>
+<span>
+3 <img class="img-responsive" src="../../images/demo/team-logo/1.png" alt="England">
+Netherland </span>
+<span class="pull-right">77</span>
+</li>
+</ul>
+</div>  
+<div class="item ">
+<ul>
+<li>
+<span>
+4 <img class="img-responsive" src="../../images/demo/team-logo/5.png" alt="England">
+France </span>
+<span class="pull-right">70</span>
+</li>
+<li>
+<span>
+5 <img class="img-responsive" src="../../images/demo/team-logo/6.png" alt="England">
+Italy </span>
+<span class="pull-right">68</span>
+</li>
+<li>
+<span>
+6 <img class="img-responsive" src="../../images/demo/team-logo/2.png" alt="England">
+Portugal </span>
+<span class="pull-right">67</span>
+</li>
+</ul>
+</div>  
+<div class="item ">
+<ul>
+<li>
+<span>
+7 <img class="img-responsive" src="../../images/demo/team-logo/6.png" alt="England">
+Italy </span>
+<span class="pull-right">67</span>
+</li>
+<li>
+<span>
+8 <img class="img-responsive" src="../../images/demo/team-logo/4.png" alt="England">
+England </span>
+<span class="pull-right">65</span>
+</li>
+<li>
+<span>
+9 <img class="img-responsive" src="../../images/demo/team-logo/3.png" alt="England">
+Germany </span>
+<span class="pull-right">65</span>
+</li>
+</ul>
+</div>  
+<div class="item ">
+<ul>
+<li>
+<span>
+10 <img class="img-responsive" src="../../images/demo/team-logo/1.png" alt="England">
+Netherland </span>
+<span class="pull-right">64</span>
+</li>
+<li>
+<span>
+11 <img class="img-responsive" src="../../images/demo/team-logo/7.png" alt="England">
+Arsenal </span>
+<span class="pull-right">50</span>
+</li>
+<li>
+<span>
+12 <img class="img-responsive" src="../../images/demo/team-logo/4.png" alt="England">
+England </span>
+<span class="pull-right">37</span>
+</li>
+</ul>
+</div>  
+</div>  
+</div>  
+ 
+<div class="carousel-controls">
+<a class="left rank-control" href="javascript:void(0);" role="button" data-slide="prev">
+<i class="fa fa-angle-left"></i>
+</a>
+<a class="right rank-control" href="javascript:void(0);" role="button" data-slide="next">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+</div> 
+</div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-module  soccer-black-sidebar  soccer-title-icon"><h3 class="sppb-addon-title" style="color:#ffffff;font-size:24px;line-height:24px;font-weight:700;">Recent Result</h3><div class="sppb-addon-content">
+<div class="sp-recent-result ">
+<div id="carousel-recent-result" class="carousel slide" data-ride="rr-carousel">
+ 
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<div class="soccer-recent-result">
+<div class="clubnames">
+<span class="text-left">Manchester City vs Bayen Munchen</span>
+<span class="pull-right">05 Oct 2015</span>
+</div>
+<div class="soccer-recent-result-item">
+<div class="text-left soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/8.png" alt="Manchester City">
+Manchester City </div>
+<div class="text-center soccer-recent-result-list">
+<span class="goal">2</span> - <span class="goal">3</span>
+</div>
+<div class="text-center soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/5.png" alt="Bayern München">
+Bayern München </div>
+</div>
+</div>  
+<div class="soccer-recent-result">
+<div class="clubnames">
+<span class="text-left">France vs Brazil</span>
+<span class="pull-right">05 Oct 2015</span>
+</div>
+<div class="soccer-recent-result-item">
+<div class="text-left soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/5.png" alt="France">
+France </div>
+<div class="text-center soccer-recent-result-list">
+<span class="goal">3</span> - <span class="goal">2</span>
+</div>
+<div class="text-center soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/7.png" alt="Arsenal">
+Arsenal </div>
+</div>
+</div>  
+<div class="soccer-recent-result">
+<div class="clubnames">
+<span class="text-left">Italy vs France</span>
+<span class="pull-right">05 Oct 2015</span>
+</div>
+<div class="soccer-recent-result-item">
+<div class="text-left soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/6.png" alt="Italy">
+Italy </div>
+<div class="text-center soccer-recent-result-list">
+<span class="goal">2</span> - <span class="goal">3</span>
+</div>
+<div class="text-center soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/5.png" alt="France">
+France </div>
+</div>
+</div>  
+</div>  
+<div class="item ">
+<div class="soccer-recent-result">
+<div class="clubnames">
+<span class="text-left">Arsenal vs Liverpool</span>
+<span class="pull-right">05 Jan 2016</span>
+</div>
+<div class="soccer-recent-result-item">
+<div class="text-left soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/1.png" alt="Arsenal">
+Arsenal </div>
+<div class="text-center soccer-recent-result-list">
+<span class="goal">2</span> - <span class="goal">1</span>
+</div>
+<div class="text-center soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/7.png" alt="Liverpool">
+Liverpool </div>
+</div>
+</div>  
+<div class="soccer-recent-result">
+<div class="clubnames">
+<span class="text-left">Portugal vs Arsenal</span>
+<span class="pull-right">05 Jun 2016</span>
+</div>
+<div class="soccer-recent-result-item">
+<div class="text-left soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/2.png" alt="Portugal">
+Portugal </div>
+<div class="text-center soccer-recent-result-list">
+<span class="goal">3</span> - <span class="goal">3</span>
+</div>
+<div class="text-center soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/7.png" alt="Arsenal">
+Arsenal </div>
+</div>
+</div>  
+<div class="soccer-recent-result">
+<div class="clubnames">
+<span class="text-left">Spain vs Argentina</span>
+<span class="pull-right">05 Oct 2015</span>
+</div>
+<div class="soccer-recent-result-item">
+<div class="text-left soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/8.png" alt="Spain">
+Spain </div>
+<div class="text-center soccer-recent-result-list">
+<span class="goal">2</span> - <span class="goal">1</span>
+</div>
+<div class="text-center soccer-recent-result-list">
+<img class="img-responsive" src="../../images/demo/team-logo/2.png" alt="Metropo">
+Metropo </div>
+</div>
+</div>  
+</div>  
+</div>  
+</div>  
+ 
+<div class="carousel-controls">
+<a class="left rr-control" href="javascript:void(0);" role="button" data-slide="prev">
+<i class="fa fa-angle-left"></i>
+</a>
+<a class="right rr-control" href="javascript:void(0);" role="button" data-slide="next">
+<i class="fa fa-angle-right"></i>
+</a>
+</div>
+</div> 
+</div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-social-icons  soccer-social-share  soccer-title-icon"><div class=" sppb-addon-title-wrapper"><h3 class="sppb-addon-title">Follow Us</h3></div><div class="sppb-social-icons  soccer-social-share  soccer-title-icon"><span><a href="#"><i class="fa fa-facebook-square "></i></a><a href="../../index.html# "> Like us on Facebook </a></span><span><a href="#"><i class="fa fa-twitter-square "></i></a><a href="../../index.html# "> Follow us on Twitter </a></span><span><a href="#"><i class="fa fa-google-plus-square "></i></a><a href="../../index.html# "> Follow us on Google plus </a></span><span><a href="#"><i class="fa fa-linkedin-square "></i></a><a href="../../index.html# "> Like us on Linkedin </a></span></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div><div class="sppb-addon sppb-addon-single-image sppb-text-center "><div class="sppb-addon-content"><a target="" href="#"><img class="sppb-img-responsive" src="../../images/demo/add-prpl.jpg" alt=""></a></div></div></div></div></div></div></section><section class="sppb-section " style=""><div class="sppb-container"><div class="sppb-row"><div class="sppb-col-sm-9"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-single-image sppb-text-left "><div class="sppb-addon-content"><a target="" href="#"><img class="sppb-img-responsive" src="../../images/demo/homepage-ad3.jpg" alt=""></a></div></div></div></div><div class="sppb-col-sm-3"><div class="sppb-addon-container" style=""></div></div></div></div></section><section class="sppb-section " style=""><div class="sppb-container"><div class="sppb-row"><div class="sppb-col-sm-3 "><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-feature sppb-text-right bottom-quick-link"><div class="sppb-addon-content" style="background-image: url(../../images/demo/veriation2-bottom-link-bg.jpg)"><div class="sppb-media"><div class="pull-right"><div class="sppb-icon"><a href="http://joomshaper.com/"><span style="display:inline-block;text-align:center;;"><i class="fa fa-chevron-right" style="font-size:30px;width:30px;height:30px;line-height:30px;;"></i></span></a></div></div><div class="sppb-media-body"><h3 class="sppb-feature-box-title sppb-media-heading" style="color:#ffffff;font-size:30px;line-height:30px;font-weight:400;">World Cup Fixtures</h3><div class="sppb-addon-text"></div></div></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div></div></div><div class="sppb-col-sm-3"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-feature sppb-text-right bottom-quick-link"><div class="sppb-addon-content" style="background-image: url(../../images/demo/veriation2-bottom-link-bg.jpg)"><div class="sppb-media"><div class="pull-right"><div class="sppb-icon"><a href="http://joomshaper.com/"><span style="display:inline-block;text-align:center;;"><i class="fa fa-chevron-right" style="font-size:30px;width:30px;height:30px;line-height:30px;;"></i></span></a></div></div><div class="sppb-media-body"><h3 class="sppb-feature-box-title sppb-media-heading" style="color:#ffffff;font-size:30px;line-height:30px;font-weight:400;">English Premier Fixtures</h3><div class="sppb-addon-text"></div></div></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div></div></div><div class="sppb-col-sm-3"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-feature sppb-text-right bottom-quick-link"><div class="sppb-addon-content" style="background-image: url(../../images/demo/veriation2-bottom-link-bg.jpg)"><div class="sppb-media"><div class="pull-right"><div class="sppb-icon"><a href="http://joomshaper.com/"><span style="display:inline-block;text-align:center;;"><i class="fa fa-chevron-right" style="font-size:30px;width:30px;height:30px;line-height:30px;;"></i></span></a></div></div><div class="sppb-media-body"><h3 class="sppb-feature-box-title sppb-media-heading" style="color:#ffffff;">Liga BBVA Fixtures</h3><div class="sppb-addon-text"></div></div></div></div></div><div class="sppb-empty-space  clearfix" style="margin-bottom:30px;"></div></div></div><div class="sppb-col-sm-3"><div class="sppb-addon-container" style=""></div></div></div></div></section><section class="sppb-section  soccer-newsletter" style="margin:0px;padding:35px 0;color:#ffffff;background-color:#000000;"><div class="sppb-container"><div class="sppb-row"><div class="sppb-col-sm-4"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-feature sppb-text-left "><div class="sppb-addon-content"><div class="sppb-media"><div class="pull-left"><span style="display:inline-block;;"><img class="sppb-img-responsive" src="../../images/demo/newsletter-white.png" alt=""></span></div><div class="sppb-media-body"><div class="sppb-addon-text"><strong>Newsletter</strong><br/>Get Sports Emails & Alerts</div></div></div></div></div></div></div><div class="sppb-col-sm-8"><div class="sppb-addon-container" style=""><div class="sppb-addon sppb-addon-module  white-news-letter"><div class="sppb-addon-content"><div class="acymailing_module" id="acymailing_module_formAcymailing22291">
+<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing22291">
+<form id="formAcymailing22291" action="http://demo.joomshaper.com/2015/soccer/index.php/home/home-2" onsubmit="return submitacymailingform('optin','formAcymailing22291')" method="post" name="formAcymailing22291">
+<div class="acymailing_module_form">
+<div class="acymailing_form">
+<p class="onefield fieldacyemail" id="field_email_formAcymailing22291"> <span class="acyfield_email acy_requiredField"><input id="user_email_formAcymailing22291" onfocus="if(this.value == 'E-mail') this.value = '';" onblur="if(this.value=='') this.value='E-mail';" class="inputbox" type="text" name="user[email]" style="width:100%" value="E-mail" title="E-mail"/></span>
+</p>
+<p class="acysubbuttons">
+<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing22291'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+</p>
+</div>
+<input type="hidden" name="ajax" value="0"/>
+<input type="hidden" name="acy_source" value="module_117"/>
+<input type="hidden" name="ctrl" value="sub"/>
+<input type="hidden" name="task" value="notask"/>
+<input type="hidden" name="redirect" value="http%3A%2F%2Fdemo.joomshaper.com%2F2015%2Fsoccer%2Findex.php%2Fhome%2Fhome-2"/>
+<input type="hidden" name="redirectunsub" value="http%3A%2F%2Fdemo.joomshaper.com%2F2015%2Fsoccer%2Findex.php%2Fhome%2Fhome-2"/>
+<input type="hidden" name="option" value="com_acymailing"/>
+<input type="hidden" name="hiddenlists" value="1"/>
+<input type="hidden" name="acyformname" value="formAcymailing22291"/>
+</div>
+</form>
+</div>
+</div>
+</div></div></div></div></div></div></section> </div>
+</div>
+</div></div></div></section><section id="sp-bottom"><div class="container"><div class="row"><div id="sp-bottom1" class="col-sm-6 col-md-4"><div class="sp-column "><div class="sp-module "><div class="sp-module-content">
+<div class="custom">
+<div class="bottom-1-logo">
+<p><img src="../../images/demo/bottom-logo.png" alt=""/></p>
+</div></div>
+</div></div><div class="sp-module "><div class="sp-module-content"><ul class="nav menu">
+<li class="item-511"><a href="#">About</a></li><li class="item-512"><a href="#">Faq</a></li><li class="item-513"><a href="#">Feedback</a></li><li class="item-514"><a href="#">Contact</a></li><li class="item-515"><a href="#">Privacy Policy</a></li></ul>
+</div></div><div class="sp-module "><div class="sp-module-content"><ul class="nav menu">
+<li class="item-565"><a href="#">Help</a></li><li class="item-566"><a href="#">Service</a></li><li class="item-563"><a href="#">Shop</a></li><li class="item-562"><a href="#">TV guide</a></li><li class="item-564"><a href="#">News</a></li></ul>
+</div></div><div class="sp-module "><div class="sp-module-content">
+<div class="custom">
+<div class="bottom-social">
+<ul>
+<li><a href="#"><i class="fa fa-facebook"><span class="dummy-text">dummy</span></i></a></li>
+<li><a href="#"><i class="fa fa-twitter"><span class="dummy-text">dummy</span></i></a></li>
+<li><a href="#"><i class="fa fa-google-plus"><span class="dummy-text">dummy</span></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin"><span class="dummy-text">dummy</span></i></a></li>
+<li><a href="#"><i class="fa fa-dribbble"><span class="dummy-text">dummy</span></i></a></li>
+</ul>
+</div></div>
+</div></div></div></div><div id="sp-bottom2" class="col-sm-6 col-md-2"><div class="sp-column "><div class="sp-module "><h3 class="sp-module-title">Football</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-516"><a href="#">Football</a></li><li class="item-517"><a href="#">Afcon 2015</a></li><li class="item-518"><a href="#">Barclays Prem</a></li><li class="item-519"><a href="#">Absa Prem</a></li></ul>
+</div></div><div class="sp-module  less-top-margin"><h3 class="sp-module-title">Euro</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-520"><a href="#">Futsal EURO</a></li><li class="item-521"><a href="#">FIFA Futsal World Cup</a></li></ul>
+</div></div></div></div><div id="sp-bottom3" class="col-sm-6 col-md-2"><div class="sp-column "><div class="sp-module "><h3 class="sp-module-title">International</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-589"><a href="#">FIFA 2015</a></li><li class="item-590"><a href="#">Copa 215</a></li><li class="item-591"><a href="#">Asia 2014</a></li><li class="item-592"><a href="#">Africa 2015</a></li><li class="item-593"><a href="#">Australia</a></li><li class="item-594"><a href="#">Brazil</a></li><li class="item-595"><a href="#">England</a></li><li class="item-596"><a href="#">Under-21</a></li><li class="item-597"><a href="#">Under-19</a></li></ul>
+</div></div></div></div><div id="sp-bottom4" class="col-sm-6 col-md-2"><div class="sp-column "><div class="sp-module "><h3 class="sp-module-title">Other Links</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-598"><a href="#">Login</a></li><li class="item-599"><a href="#">Register</a></li><li class="item-600"><a href="#">mysoccer.com</a></li><li class="item-601"><a href="#">Leagues</a></li></ul>
+</div></div><div class="sp-module "><h3 class="sp-module-title">Tools</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-530"><a href="#">RSS Feed</a></li><li class="item-531"><a href="#">Calendar</a></li></ul>
+</div></div></div></div><div id="sp-bottom5" class="col-sm-2 col-md-2"><div class="sp-column "><div class="sp-module "><h3 class="sp-module-title">Help</h3><div class="sp-module-content"><ul class="nav menu">
+<li class="item-567"><a href="#">catalogue</a></li><li class="item-568"><a href="#">Community</a></li><li class="item-569"><a href="#">Corporate</a></li><li class="item-570"><a href="#">General</a></li><li class="item-571"><a href="#">Products</a></li><li class="item-572"><a href="#">Usability</a></li><li class="item-573"><a href="#">Careers</a></li><li class="item-574"><a href="#">Press</a></li><li class="item-575"><a href="#">Corporate Info</a></li></ul>
+</div></div></div></div></div></div></section><footer id="sp-footer"><div class="container"><div class="row"><div id="sp-footer1" class="col-sm-12 col-md-12"><div class="sp-column "><span class="sp-copyright"> Copyright© 2015<a href="#"> Soccer</a> All Right Reserved</span></div></div></div></div></footer>
+<div class="offcanvas-menu">
+<a href="#" class="close-offcanvas"><i class="fa fa-remove"></i></a>
+<div class="offcanvas-inner">
+<div class="sp-module "><h3 class="sp-module-title">Search</h3><div class="sp-module-content"><div class="search">
+<form action="http://demo.joomshaper.com/2015/soccer/index.php/home/home-2" method="post">
+<input name="searchword" id="mod-search-searchword" maxlength="200" class="inputbox search-query" type="text" size="20" placeholder="Search ..."/> <input type="hidden" name="task" value="search"/>
+<input type="hidden" name="option" value="com_search"/>
+<input type="hidden" name="Itemid" value="560"/>
+</form>
+</div>
+</div></div><div class="sp-module "><div class="sp-module-content"><ul class="nav menu">
+<li class="item-437 active deeper parent"><a href="../../index-2.html">Home</a><ul class="nav-child unstyled small"><li class="item-560 current active"><a href="home-2.html">Home Variation 2</a></li></ul></li><li class="item-605 deeper parent"><a href="#">Club List</a><ul class="nav-child unstyled small"><li class="item-610"><a href="../clubs/real-madrid.html">Real Madrid</a></li><li class="item-611"><a href="../clubs/bercelona.html">Bercelona</a></li><li class="item-606"><a href="../clubs/arsenal.html">Arsenal</a></li><li class="item-609"><a href="../clubs/manchester-city.html">Manchester City</a></li><li class="item-607"><a href="../clubs/metropo.html">Metropo</a></li><li class="item-608"><a href="../clubs/selvilla.html">Selvilla</a></li></ul></li><li class="item-612 deeper parent"><a href="#">Fixtures</a><ul class="nav-child unstyled small"><li class="item-613"><a href="../fixtures/liga-bbva.html">Liga BBVA</a></li><li class="item-614"><a href="../fixtures/supper-cup.html">Supper Cup</a></li><li class="item-615"><a href="../fixtures/southern.html">Southern</a></li><li class="item-616"><a href="../fixtures/uefa.html">UEFA</a></li></ul></li><li class="item-617 deeper parent"><a href="#">Results</a><ul class="nav-child unstyled small"><li class="item-618"><a href="../results/liga-bbva.html">LIGA BBVA</a></li><li class="item-619"><a href="../results/super-cup.html">Super Cup</a></li><li class="item-621"><a href="../results/southern.html">SOUTHERN</a></li><li class="item-620"><a href="../results/uefa.html">UEFA</a></li></ul></li><li class="item-622 deeper parent"><a href="#">Point Table</a><ul class="nav-child unstyled small"><li class="item-623"><a href="../point-table/liga-bbva.html">Liga BBVA</a></li><li class="item-624"><a href="../point-table/liga-bbva-2.html">Super Cup</a></li><li class="item-625"><a href="../point-table/southern.html">Southern</a></li><li class="item-626"><a href="../point-table/southern-2.html">UEFA</a></li></ul></li><li class="item-555 deeper parent"><a href="#">Soccer</a><ul class="nav-child unstyled small"><li class="item-556"><a href="../soccer/tournaments.html">Tournaments</a></li><li class="item-557"><a href="../soccer/matches.html">Matches</a></li><li class="item-558"><a href="../soccer/players.html">Players</a></li><li class="item-561"><a href="../soccer/teams.html">Teams</a></li><li class="item-627"><a href="../soccer/tournament-details.html">Tournament Details</a></li><li class="item-577"><a href="../soccer/match-details.html">Match Details</a></li><li class="item-630"><a href="../soccer/team-details.html">Team Details</a></li><li class="item-628"><a href="../soccer/tournament-results.html">Tournament Results</a></li><li class="item-604"><a href="../soccer/fixture.html">Fixture</a></li><li class="item-629"><a href="../soccer/point-table.html">Point Table</a></li></ul></li><li class="item-279 deeper parent"><a href="#">Pages</a><ul class="nav-child unstyled small"><li class="item-487"><a href="../../index114a.html?tmpl=comingsoon">Coming Soon</a></li><li class="item-488"><a href="../component/404/index46e3.html?Itemid=488">404 Page</a></li><li class="item-278"><a href="../pages/blog.html">Soccer News</a></li><li class="item-280 deeper parent"><a href="#">Joomla!</a><ul class="nav-child unstyled small"><li class="item-266 deeper parent"><a href="#">Content Component</a><ul class="nav-child unstyled small"><li class="item-257"><a href="../pages/joomla/content-component/single-article.html">Single Article</a></li><li class="item-259"><a href="../pages/joomla/content-component/article-category-blog.html">Article Category Blog</a></li><li class="item-260"><a href="../pages/joomla/content-component/article-category-list.html">Article Category List</a></li><li class="item-262"><a href="../pages/joomla/content-component/featured-articles.html">Featured Articles</a></li></ul></li><li class="item-270 deeper parent"><a href="#">Contact Component</a><ul class="nav-child unstyled small"><li class="item-251"><a href="../pages/joomla/contact-component/contact-categories.html">Contact Categories</a></li><li class="item-275"><a href="../pages/joomla/contact-component/contact-single-category.html">Contact Single Category</a></li><li class="item-229"><a href="../pages/joomla/contact-component/single-contact.html">Single Contact</a></li><li class="item-452"><a href="../pages/joomla/contact-component/featured-contacts.html">Featured Contacts</a></li></ul></li><li class="item-271 deeper parent"><a href="#">Users Component</a><ul class="nav-child unstyled small"><li class="item-402"><a href="../pages/joomla/users-component/login-form.html">Login Form</a></li><li class="item-403"><a href="../pages/joomla/users-component/login-form.html">User Profile</a></li><li class="item-404"><a href="../pages/joomla/users-component/login-form.html">Edit User Profile</a></li><li class="item-405"><a href="../pages/joomla/users-component/registration-form.html">Registration Form</a></li></ul></li><li class="item-268 deeper parent"><a href="#">Other Components</a><ul class="nav-child unstyled small"><li class="item-267 deeper parent"><a href="../pages/joomla/other-components/news-feeds-component.html">News Feeds Component</a><ul class="nav-child unstyled small"><li class="item-252"><a href="../pages/joomla/other-components/news-feeds-component/new-feed-categories.html">News Feed Categories</a></li><li class="item-254"><a href="../pages/joomla/other-components/news-feeds-component/single-news-feed.html">Single News Feed</a></li><li class="item-253"><a href="../pages/joomla/other-components/news-feeds-component/news-feed-category.html">News Feed Category</a></li></ul></li><li class="item-276"><a href="../pages/joomla/other-components/search-component.html">Search Components</a></li><li class="item-466"><a href="../pages/joomla/other-components/smart-search.html">Smart Search</a></li><li class="item-255"><a href="../pages/joomla/other-components/search.html">Search</a></li></ul></li></ul></li></ul></li></ul>
+</div></div>
+</div>
+</div>
+</div>
+</body>
+
+<!-- Mirrored from demo.joomshaper.com/2015/soccer/index.php/home/home-2 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Apr 2016 10:33:08 GMT -->
+</html>

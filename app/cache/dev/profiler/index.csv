@@ -216,3 +216,11 @@ a95fbc,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/tem
 d8b6db,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/templates/shaper_soccer/images/presets/preset1/logo%402x.png,1462804535,
 721fae,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/matches9b5f.html?start=5,1462805612,cae7d7
 cae7d7,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/matches9b5f.html?start=5,1462805612,
+4e7092,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche,1464470836,
+a0c25f,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/,1464470837,
+dce5fa,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/templates/shaper_soccer/images/presets/preset1/logo%402x.png,1464470842,a29195
+a29195,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/matche/templates/shaper_soccer/images/presets/preset1/logo%402x.png,1464470842,
+baf8d3,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/,1464470862,
+671b58,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/equipe/,1464470869,
+621f1c,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/equipe/templates/shaper_soccer/images/presets/preset1/logo%402x.png,1464470873,bf2b30
+bf2b30,::1,GET,http://localhost:777/Projet/championat/web/app_dev.php/equipe/templates/shaper_soccer/images/presets/preset1/logo%402x.png,1464470873,

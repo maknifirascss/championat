@@ -15,8 +15,7 @@ use Acme\ChampionatBundle\Form\JourneeType;
  *
  * @Route("/journee")
  */
-class JourneeController extends Controller
-{
+class JourneeController extends Controller {
 
     /**
      * Lists all Journee entities.
@@ -25,16 +24,19 @@ class JourneeController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
-    {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AcmeChampionatBundle:Journee')->findAll();
-
+        $entities2 = $em->getRepository('AcmeChampionatBundle:Ligue')->find(1);
+        $entities3 = $em->getRepository('AcmeChampionatBundle:Saison')->find(1);
         return array(
             'entities' => $entities,
+            'entities2' => $entities2,
+            'entities3' => $entities3,
         );
     }
+
     /**
      * Creates a new Journee entity.
      *
@@ -42,8 +44,7 @@ class JourneeController extends Controller
      * @Method("POST")
      * @Template("AcmeChampionatBundle:Journee:new.html.twig")
      */
-    public function createAction(Request $request)
-    {
+    public function createAction(Request $request) {
         $entity = new Journee();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
@@ -58,7 +59,7 @@ class JourneeController extends Controller
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -69,8 +70,7 @@ class JourneeController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Journee $entity)
-    {
+    private function createCreateForm(Journee $entity) {
         $form = $this->createForm(new JourneeType(), $entity, array(
             'action' => $this->generateUrl('journee_create'),
             'method' => 'POST',
@@ -88,14 +88,13 @@ class JourneeController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function newAction()
-    {
+    public function newAction() {
         $entity = new Journee();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -106,8 +105,7 @@ class JourneeController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function showAction($id)
-    {
+    public function showAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Journee')->find($id);
@@ -119,7 +117,7 @@ class JourneeController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -131,8 +129,7 @@ class JourneeController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function editAction($id)
-    {
+    public function editAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Journee')->find($id);
@@ -145,21 +142,20 @@ class JourneeController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
 
     /**
-    * Creates a form to edit a Journee entity.
-    *
-    * @param Journee $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
-    private function createEditForm(Journee $entity)
-    {
+     * Creates a form to edit a Journee entity.
+     *
+     * @param Journee $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createEditForm(Journee $entity) {
         $form = $this->createForm(new JourneeType(), $entity, array(
             'action' => $this->generateUrl('journee_update', array('id' => $entity->getId())),
             'method' => 'PUT',
@@ -169,6 +165,7 @@ class JourneeController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Journee entity.
      *
@@ -176,8 +173,7 @@ class JourneeController extends Controller
      * @Method("PUT")
      * @Template("AcmeChampionatBundle:Journee:edit.html.twig")
      */
-    public function updateAction(Request $request, $id)
-    {
+    public function updateAction(Request $request, $id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Journee')->find($id);
@@ -197,19 +193,19 @@ class JourneeController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
+
     /**
      * Deletes a Journee entity.
      *
      * @Route("/{id}", name="journee_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, $id)
-    {
+    public function deleteAction(Request $request, $id) {
         $form = $this->createDeleteForm($id);
         $form->handleRequest($request);
 
@@ -235,13 +231,13 @@ class JourneeController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm($id)
-    {
+    private function createDeleteForm($id) {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('journee_delete', array('id' => $id)))
-            ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
+                        ->setAction($this->generateUrl('journee_delete', array('id' => $id)))
+                        ->setMethod('DELETE')
+                        ->add('submit', 'submit', array('label' => 'Delete'))
+                        ->getForm()
         ;
     }
+
 }

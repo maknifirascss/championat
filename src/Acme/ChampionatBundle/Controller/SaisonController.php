@@ -15,8 +15,7 @@ use Acme\ChampionatBundle\Form\SaisonType;
  *
  * @Route("/saison")
  */
-class SaisonController extends Controller
-{
+class SaisonController extends Controller {
 
     /**
      * Lists all Saison entities.
@@ -25,16 +24,32 @@ class SaisonController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
-    {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AcmeChampionatBundle:Saison')->findAll();
 
+        $entities2 = $em->getRepository('AcmeChampionatBundle:Ligue')->find(1);
+
+        $request = Request::createFromGlobals();
+        
+        $idJourneeUrl = $request->query->get('ligue');
+
+        if(isset($idJourneeUrl)){
+            $id = $em->getRepository('AcmeChampionatBundle:Ligue')->find($idJourneeUrl);
+        }
+        else{
+            $id = $em->getRepository('AcmeChampionatBundle:Ligue')->findAll();
+        }
+
+
         return array(
             'entities' => $entities,
+            'entities2' => $entities2,
+            'id' => $id,
         );
     }
+
     /**
      * Creates a new Saison entity.
      *
@@ -42,8 +57,7 @@ class SaisonController extends Controller
      * @Method("POST")
      * @Template("AcmeChampionatBundle:Saison:new.html.twig")
      */
-    public function createAction(Request $request)
-    {
+    public function createAction(Request $request) {
         $entity = new Saison();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
@@ -58,7 +72,7 @@ class SaisonController extends Controller
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -69,8 +83,7 @@ class SaisonController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Saison $entity)
-    {
+    private function createCreateForm(Saison $entity) {
         $form = $this->createForm(new SaisonType(), $entity, array(
             'action' => $this->generateUrl('saison_create'),
             'method' => 'POST',
@@ -88,14 +101,13 @@ class SaisonController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function newAction()
-    {
+    public function newAction() {
         $entity = new Saison();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -106,8 +118,7 @@ class SaisonController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function showAction($id)
-    {
+    public function showAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Saison')->find($id);
@@ -119,7 +130,7 @@ class SaisonController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -131,8 +142,7 @@ class SaisonController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function editAction($id)
-    {
+    public function editAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Saison')->find($id);
@@ -145,21 +155,20 @@ class SaisonController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
 
     /**
-    * Creates a form to edit a Saison entity.
-    *
-    * @param Saison $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
-    private function createEditForm(Saison $entity)
-    {
+     * Creates a form to edit a Saison entity.
+     *
+     * @param Saison $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createEditForm(Saison $entity) {
         $form = $this->createForm(new SaisonType(), $entity, array(
             'action' => $this->generateUrl('saison_update', array('id' => $entity->getId())),
             'method' => 'PUT',
@@ -169,6 +178,7 @@ class SaisonController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Saison entity.
      *
@@ -176,8 +186,7 @@ class SaisonController extends Controller
      * @Method("PUT")
      * @Template("AcmeChampionatBundle:Saison:edit.html.twig")
      */
-    public function updateAction(Request $request, $id)
-    {
+    public function updateAction(Request $request, $id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Saison')->find($id);
@@ -197,19 +206,19 @@ class SaisonController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
+
     /**
      * Deletes a Saison entity.
      *
      * @Route("/{id}", name="saison_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, $id)
-    {
+    public function deleteAction(Request $request, $id) {
         $form = $this->createDeleteForm($id);
         $form->handleRequest($request);
 
@@ -235,13 +244,13 @@ class SaisonController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm($id)
-    {
+    private function createDeleteForm($id) {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('saison_delete', array('id' => $id)))
-            ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
+                        ->setAction($this->generateUrl('saison_delete', array('id' => $id)))
+                        ->setMethod('DELETE')
+                        ->add('submit', 'submit', array('label' => 'Delete'))
+                        ->getForm()
         ;
     }
+
 }

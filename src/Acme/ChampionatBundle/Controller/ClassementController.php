@@ -15,8 +15,7 @@ use Acme\ChampionatBundle\Form\ClassementType;
  *
  * @Route("/classement")
  */
-class ClassementController extends Controller
-{
+class ClassementController extends Controller {
 
     /**
      * Lists all Classement entities.
@@ -25,16 +24,23 @@ class ClassementController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
-    {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AcmeChampionatBundle:Classement')->findAll();
-
+        $entity2 = $em->getRepository('AcmeChampionatBundle:Ligue')->find(1);
+        $entity3 = $em->getRepository('AcmeChampionatBundle:Saison')->find(1);
+        $entity4 = $em->getRepository('AcmeChampionatBundle:Equipe')->findAll();
+        $matche = $em->getRepository('AcmeChampionatBundle:Matche')->findAll();
         return array(
             'entities' => $entities,
+            'entity2' => $entity2,
+            'entity3' => $entity3,
+            'entity4' => $entity4,
+            'matche' => $matche,
         );
     }
+
     /**
      * Creates a new Classement entity.
      *
@@ -42,8 +48,7 @@ class ClassementController extends Controller
      * @Method("POST")
      * @Template("AcmeChampionatBundle:Classement:new.html.twig")
      */
-    public function createAction(Request $request)
-    {
+    public function createAction(Request $request) {
         $entity = new Classement();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
@@ -58,7 +63,7 @@ class ClassementController extends Controller
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -69,8 +74,7 @@ class ClassementController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Classement $entity)
-    {
+    private function createCreateForm(Classement $entity) {
         $form = $this->createForm(new ClassementType(), $entity, array(
             'action' => $this->generateUrl('classement_create'),
             'method' => 'POST',
@@ -88,14 +92,13 @@ class ClassementController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function newAction()
-    {
+    public function newAction() {
         $entity = new Classement();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -106,8 +109,7 @@ class ClassementController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function showAction($id)
-    {
+    public function showAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Classement')->find($id);
@@ -119,7 +121,7 @@ class ClassementController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -131,8 +133,7 @@ class ClassementController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function editAction($id)
-    {
+    public function editAction($id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Classement')->find($id);
@@ -145,21 +146,20 @@ class ClassementController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
 
     /**
-    * Creates a form to edit a Classement entity.
-    *
-    * @param Classement $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
-    private function createEditForm(Classement $entity)
-    {
+     * Creates a form to edit a Classement entity.
+     *
+     * @param Classement $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createEditForm(Classement $entity) {
         $form = $this->createForm(new ClassementType(), $entity, array(
             'action' => $this->generateUrl('classement_update', array('id' => $entity->getId())),
             'method' => 'PUT',
@@ -169,6 +169,7 @@ class ClassementController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Classement entity.
      *
@@ -176,8 +177,7 @@ class ClassementController extends Controller
      * @Method("PUT")
      * @Template("AcmeChampionatBundle:Classement:edit.html.twig")
      */
-    public function updateAction(Request $request, $id)
-    {
+    public function updateAction(Request $request, $id) {
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('AcmeChampionatBundle:Classement')->find($id);
@@ -197,19 +197,19 @@ class ClassementController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
+
     /**
      * Deletes a Classement entity.
      *
      * @Route("/{id}", name="classement_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, $id)
-    {
+    public function deleteAction(Request $request, $id) {
         $form = $this->createDeleteForm($id);
         $form->handleRequest($request);
 
@@ -235,13 +235,13 @@ class ClassementController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm($id)
-    {
+    private function createDeleteForm($id) {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('classement_delete', array('id' => $id)))
-            ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
+                        ->setAction($this->generateUrl('classement_delete', array('id' => $id)))
+                        ->setMethod('DELETE')
+                        ->add('submit', 'submit', array('label' => 'Delete'))
+                        ->getForm()
         ;
     }
+
 }

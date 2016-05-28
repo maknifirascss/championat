@@ -25,14 +25,41 @@ class ButmarqueController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
-    {
+   public function indexAction() {
+      
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AcmeChampionatBundle:Butmarque')->findAll();
+        $entities2 = $em->getRepository('AcmeChampionatBundle:Ligue')->find(1);
+        $entities3 = $em->getRepository('AcmeChampionatBundle:Saison')->find(1);
+        
+         $joueur = $em->getRepository('AcmeChampionatBundle:Joueur')->findAll();
 
+         $request = Request::createFromGlobals();
+        $idJourneeUrl = $request->query->get('matche');
+        
+        $id = $em->getRepository('AcmeChampionatBundle:Matche')->find($idJourneeUrl);
+       
+        
+        /*
+        $result = $em->createQueryBuilder(); 
+        $dqlj = $result->select('b')
+                ->from('AcmeChampionatBundle:Butmarque', 'b')
+                 ->setParameter('idUrl', $idJourneeUrl)
+                ->where('b.idMatch=:idUrl')
+                ->getQuery()
+                ->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
+
+        var_dump($dqlj);
+         
+         */
         return array(
             'entities' => $entities,
+            'entities2' => $entities2,
+            'entities3' => $entities3,
+            'joueur'=>$joueur,
+          //  'listeButMatch' => $dqlj,
+            'id'=>$id,
         );
     }
     /**

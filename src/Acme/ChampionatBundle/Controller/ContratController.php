@@ -30,9 +30,13 @@ class ContratController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AcmeChampionatBundle:Contrat')->findAll();
-
+ $request = Request::createFromGlobals();
+        $idJourneeUrl = $request->query->get('equipe');
+        
+        $id = $em->getRepository('AcmeChampionatBundle:Equipe')->find($idJourneeUrl);
         return array(
             'entities' => $entities,
+             'id'=>$id,
         );
     }
     /**

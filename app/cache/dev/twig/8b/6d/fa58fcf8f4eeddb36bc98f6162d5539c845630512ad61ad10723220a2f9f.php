@@ -90,7 +90,11 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
                                                 <img class=\"spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb\" src=\"";
             // line 41
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("template/images/demo/team-logo/5.png"), "html", null, true);
+<<<<<<< HEAD
             echo "\"  alt=\"Bayern München\" >
+=======
+            echo "\"  alt=\"Bayern MÃ¼nchen\" >
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
 
                                             </a>
                                         </div><!-- /.spsoccer-col-lg -->
@@ -104,7 +108,38 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 48
         echo "   
+<<<<<<< HEAD
 
+=======
+     <div class=\"item-list-wrap\">
+                                                                                            <div class=\"spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 text-left\">
+                                                                                                <a href=\"matches/22-france-vs-brazil.html\">
+                                                                                                    <img class=\"spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb\" src=\"../../images/demo/team-logo/5.png\" alt=\"France\">
+                                                                                                        <span class=\"spsoccer-team-name\">France</span>
+                                                                                                </a>
+                                                                                            </div> <!-- /.spsoccer-col-lg -->
+
+                                                                                            <div class=\"spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12\">
+                                                                                                <div class=\"spsoccer-match-date-time\">
+                                                                                                    <span>05 Oct, 2015</span>,
+                                                                                                    <span>02:00 AM</span>
+                                                                                                </div>
+
+                                                                                                <p class=\"spsoccer-match-location\">Allianz Arena</p>
+
+                                                                                                <!--p class=\"spsoccer-match-location\">
+                                                                                                                                </p -->
+                                                                                            </div><!-- /.spsoccer-col-lg -->
+
+                                                                                            <div class=\"spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 text-right\">
+                                                                                                <a href=\"matches/22-france-vs-brazil.html\">
+                                                                                                    <span class=\"spsoccer-team-name\">Arsenal</span>
+                                                                                                    <img class=\"spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb\" src=\"../../images/demo/team-logo/7.png\" alt=\"Arsenal\">
+                                                                                                </a>
+                                                                                            </div><!-- /.spsoccer-col-lg -->
+
+                                                                                        </div>
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
                                 <div class=\"soccer-pagination\">
                                     <ul class=\"pagination\"><li class='active'><a>1</a></li><li><a class='' href='matches9b5f.html?start=5' title='2'>2</a></li><li><a class='next' href='matches9b5f.html?start=5' title='&raquo;'>&raquo;</a></li><li><a class='' href='matches9b5f.html?start=5' title='End'>End</a></li></ul>\t\t\t</div>
                                 <!-- END:: Pagination -->
@@ -162,6 +197,7 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
         </thead>
         <tbody>
     ";
+<<<<<<< HEAD
         // line 106
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
@@ -170,11 +206,22 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
             echo "        <tr>
             <td><a href=\"";
             // line 108
+=======
+        // line 133
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
+        foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
+            // line 134
+            echo "        <tr>
+            <td><a href=\"";
+            // line 135
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("matche_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "date"), "Y-m-d H:i:s"), "html", null, true);
             echo "</a></td>
             <td>";
+<<<<<<< HEAD
             // line 109
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
             echo "</td>
@@ -184,19 +231,38 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
             echo "</td>
             <td>";
             // line 111
+=======
+            // line 136
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"), "html", null, true);
+            echo "</td>
+            <td>";
+            // line 137
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "idEquipe"), "html", null, true);
+            echo "</td>
+            <td>";
+            // line 138
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "idEquipe2"), "html", null, true);
             echo "</td>
             <td>
             <ul>
                 <li>
                     <a href=\"";
+<<<<<<< HEAD
             // line 115
+=======
+            // line 142
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("matche_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">show</a>
                 </li>
                 <li>
                     <a href=\"";
+<<<<<<< HEAD
             // line 118
+=======
+            // line 145
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("matche_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
             echo "\">edit</a>
                 </li>
@@ -208,14 +274,22 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+<<<<<<< HEAD
         // line 124
+=======
+        // line 151
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
         echo "    </tbody>
 </table>
 
     <ul>
     <li>
         <a href=\"";
+<<<<<<< HEAD
         // line 129
+=======
+        // line 156
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
         echo $this->env->getExtension('routing')->getPath("matche_new");
         echo "\">
             Create a new entry
@@ -240,6 +314,10 @@ class __TwigTemplate_8b6dfa58fcf8f4eeddb36bc98f6162d5539c845630512ad61ad10723220
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  219 => 129,  212 => 124,  200 => 118,  194 => 115,  187 => 111,  183 => 110,  179 => 109,  173 => 108,  170 => 107,  166 => 106,  106 => 48,  92 => 41,  88 => 40,  74 => 29,  70 => 28,  61 => 22,  57 => 21,  51 => 17,  47 => 16,  31 => 4,  28 => 3,);
+=======
+        return array (  246 => 156,  239 => 151,  227 => 145,  221 => 142,  214 => 138,  210 => 137,  206 => 136,  200 => 135,  197 => 134,  193 => 133,  106 => 48,  92 => 41,  88 => 40,  74 => 29,  70 => 28,  61 => 22,  57 => 21,  51 => 17,  47 => 16,  31 => 4,  28 => 3,);
+>>>>>>> ee1cfdefa3761c4d5f46bebf7f01f8a1eae0994c
     }
 }

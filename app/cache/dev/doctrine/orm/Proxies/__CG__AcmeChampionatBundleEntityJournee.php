@@ -36,7 +36,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'libelle', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateDebut', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateFin', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'idSaison');
+            return ['__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'libelle', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateDebut', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateFin', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'idSaison'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'libelle', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateDebut', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateFin', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'idSaison');
+        return ['__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'libelle', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateDebut', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'dateFin', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Journee' . "\0" . 'idSaison'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -179,7 +179,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function setLibelle($libelle)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelle', array($libelle));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLibelle', [$libelle]);
 
         return parent::setLibelle($libelle);
     }
@@ -190,7 +190,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function getLibelle()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelle', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLibelle', []);
 
         return parent::getLibelle();
     }
@@ -201,7 +201,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function setDateDebut($dateDebut)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateDebut', array($dateDebut));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateDebut', [$dateDebut]);
 
         return parent::setDateDebut($dateDebut);
     }
@@ -212,7 +212,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function getDateDebut()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateDebut', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateDebut', []);
 
         return parent::getDateDebut();
     }
@@ -223,7 +223,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function setDateFin($dateFin)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateFin', array($dateFin));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateFin', [$dateFin]);
 
         return parent::setDateFin($dateFin);
     }
@@ -234,7 +234,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function getDateFin()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateFin', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateFin', []);
 
         return parent::getDateFin();
     }
@@ -249,7 +249,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -260,7 +260,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function setIdSaison(\Acme\ChampionatBundle\Entity\Saison $idSaison = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdSaison', array($idSaison));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdSaison', [$idSaison]);
 
         return parent::setIdSaison($idSaison);
     }
@@ -271,7 +271,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function getIdSaison()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdSaison', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdSaison', []);
 
         return parent::getIdSaison();
     }
@@ -282,7 +282,7 @@ class Journee extends \Acme\ChampionatBundle\Entity\Journee implements \Doctrine
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
     }

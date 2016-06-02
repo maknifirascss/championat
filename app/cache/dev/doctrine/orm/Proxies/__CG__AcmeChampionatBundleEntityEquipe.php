@@ -36,7 +36,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'nomEquipe', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'idLigue');
+            return ['__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'nomEquipe', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'idLigue'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'nomEquipe', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'idLigue');
+        return ['__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'nomEquipe', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'id', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Equipe' . "\0" . 'idLigue'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -179,7 +179,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
     public function setNomEquipe($nomEquipe)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomEquipe', array($nomEquipe));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomEquipe', [$nomEquipe]);
 
         return parent::setNomEquipe($nomEquipe);
     }
@@ -190,7 +190,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
     public function getNomEquipe()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNomEquipe', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNomEquipe', []);
 
         return parent::getNomEquipe();
     }
@@ -205,7 +205,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -216,7 +216,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
     public function setIdLigue(\Acme\ChampionatBundle\Entity\Ligue $idLigue = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdLigue', array($idLigue));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdLigue', [$idLigue]);
 
         return parent::setIdLigue($idLigue);
     }
@@ -227,7 +227,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
     public function getIdLigue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdLigue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdLigue', []);
 
         return parent::getIdLigue();
     }
@@ -238,7 +238,7 @@ class Equipe extends \Acme\ChampionatBundle\Entity\Equipe implements \Doctrine\O
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
     }

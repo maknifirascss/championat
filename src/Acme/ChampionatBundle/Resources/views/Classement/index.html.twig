@@ -1,41 +1,187 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Classement list</h1>
+     <section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-page-title"style="background-image: url('{{ asset('template/images/demo/blog-bg.jpg') }}');"><div class="container"><h2>UEFA</h2>
+<ol class="breadcrumb">
+	<span>You are here: &#160;</span><li><a href="../../index-2.html" class="pathway">Home</a></li><li><a href="#" class="pathway">Point Table</a></li><li class="active">UEFA</li></ol>
+</div></div></div></div></div></section>
+    
+    
+    <section id="sp-main-body"><div class="container"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">
+	</div>
+<div id="akeeba-renderjoomla">
+<div id="spsoccer" class="spsoccer view-spsoccer-tournament tournament-standings">
+	<div class="spsoccer-tournament">
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Nbpoints</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('classement_show', { 'id': entity.id }) }}">{{ entity.nbPoints }}</a></td>
-                <td>{{ entity.id }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('classement_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('classement_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+		<div class="spsoccer-container">
 
-        <ul>
-        <li>
-            <a href="{{ path('classement_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+			<div class="spsoccer-row-fluid">
+				<div class="torunament-info">
+					<div class="tournament-header">
+						<h2 class="soccer-title"> UEFA</h2>
+					</div>
+				</div> <!-- /.spsoccer-col-lg -->
+			</div> <!-- /.spsoccer-row -->
+
+			
+                        
+                        
+                        
+                        <div id="tournament-standing">
+
+		  		<!-- has Standings -->
+				<div class="spsoccer-standings-wrapper"   >
+
+					<div class="pointboard-header" >
+						<div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 header-left spsoccer-col-xs-5">
+							<ul>
+								<li>Position</li>
+								<li>Team</li>
+							</ul>
+						</div>
+						<div class="spsoccer-col-lg-8 spsoccer-col-md-8 spsoccer-col-sm-12 header-right spsoccer-col-xs-7">
+							<ul>
+								<li>P</li>
+								<li>W</li>
+								<li>D</li>
+								<li>L</li>
+								<li>GF</li>
+								<li>GA</li>
+								<li>AVG</li>
+								<li>PTS</li>																					
+							</ul>
+						</div>					
+					</div>
+					 <div id="container">
+                                     {% set i = 0 %}
+                                     {% for entityeq in entity4 %}
+                                    {% set i = i+1 %}
+                                    
+                                   
+                                    
+                                    
+					
+					<div class="item-list-wrap">
+{% if entityeq.id is sameas(i) %}
+						<div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 spsoccer-col-xs-5 team-position">
+							<div class="teamthumb">
+								<div class="inline-block">
+									<p>{{i}}</p>
+								</div>
+								<img class="spsoccer-img-thumbnail spsoccer-img-responsive" src={{asset('template/images/logoEquipeMin/')}}{{ entityeq.id }}.png alt=" {{ entityeq.nomEquipe }}">
+								<span class="spsoccer-team-name"> {{ entityeq.nomEquipe }}</span>		
+							</div>
+						</div> <!-- /.spsoccer-col-lg -->
+                                                {% set id = entityeq.id %}
+                            {% set nom= entityeq.nomEquipe %}
+{% endif %}
+
+
+{% set mj = 0 %}{% set mg = 0 %}
+                    {% set mp = 0 %}{% set mn = 0 %}{% set bm = 0 %}
+                    {% set bc = 0 %}{% set df = 0 %}{% set p = 0 %}
+                    {% for mat in matche %}
+
+ 
+                            {% set pieces =  mat.resultat |split("-") %}                     
+                        
+                        
+                        {% if entityeq.nomEquipe  == mat.idEquipe %}
+                            {% set mj = mj + 1 %}
+
+                            {% set bm = bm + pieces[0] %}
+                            {% set bc = bc + pieces[1] %}
+                            {% if pieces[0] > pieces[1] %}
+                                {% set p =p+ 3 %}  
+                                {% set mg = mg + 1 %}
+
+                            {% endif%}
+                            {% if pieces[0] == pieces[1] %}
+                                {% set p =p+ 1 %}   
+                                {% set mn = mn + 1 %}
+                            {% endif%}
+                            {% if pieces[0] < pieces[1] %}
+                                {% set mp = mp + 1 %}
+                            {% endif%}
+
+                        {% endif%}
+
+                        {% if entityeq.nomEquipe  ==mat.idEquipe2 %}
+                            {% set mj = mj + 1 %}
+
+
+                            {% set bm = bm + pieces[1] %}
+                            {% set bc = bc + pieces[0] %}
+                            {% if pieces[0] < pieces[1] %}
+                                {% set p =p+ 3 %}  
+                                {% set mg = mg + 1 %}
+
+                            {% endif%}
+                            {% if pieces[0] == pieces[1] %}
+                                {% set p =p+ 1 %}    
+                                {% set mn = mn + 1 %}
+                            {% endif%}
+
+                            {% if pieces[0] > pieces[1] %}
+                                {% set mp = mp + 1 %}
+                            {% endif%}
+
+                        {% endif%}
+                    {% endfor%} 
+                    {% set df = bm - bc %}
+
+
+
+
+
+
+
+
+
+						<div class="spsoccer-col-lg-8 spsoccer-col-md-8 spsoccer-col-sm-12 spsoccer-col-xs-7 team-stats">
+							<div class="team-point-table">
+								<ul >
+									<li> {{mj}}</li>
+									<li> {{mg}} </li>
+									<li> {{mp}} </li>
+									<li> {{mn}} </li>
+									<li> {{bm}} </li>
+									<li> {{bc}} </li>
+                                                                        <li> {{df}} </li>
+                                                                        <li class="f">{{p}}</li>
+								</ul>
+							</div>
+						</div> <!-- /.spsoccer-col-lg -->
+
+					</div> <!-- ./spsoccer-row -->
+
+					
+				  {% endfor%} 	
+                                         </div>
+									
+				</div> <!-- ./spsoccer-standings-wrapper -->
+						  	</div> <!-- /.tournament-standing -->
+		
+		</div> <!-- /. spsoccer-container -->
+
+	</div> <!-- /.spsoccer-tournament -->
+</div> <!-- /#spsoccer .spsoccer --></div>
+</div></div></div></div></section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
     {% endblock %}

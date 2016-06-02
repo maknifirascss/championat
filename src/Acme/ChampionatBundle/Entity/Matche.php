@@ -59,6 +59,108 @@ class Matche {
     private $idEquipe2;
 
     /**
+     * @var string
+     */
+    private $listeJournee;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="resultat", type="string", length=50, nullable=false)
+     */
+    private $resultat;
+
+    
+    
+    public function __construct() {
+        
+    }
+
+    public function __call($name, $arguments) {
+        
+    }
+
+    public static function __callStatic($name, $arguments) {
+        
+    }
+
+    public function __clone() {
+        
+    }
+
+    public function __destruct() {
+        
+    }
+
+    public function __get($name) {
+        
+    }
+
+    public function __invoke() {
+        
+    }
+
+    public function __isset($name) {
+        
+    }
+
+    public function __set($name, $value) {
+        
+    }
+
+    public static function __set_state($array) {
+        
+    }
+
+    public function __sleep() {
+        
+    }
+
+    public function __unset($name) {
+        
+    }
+
+    public function __wakeup() {
+        
+    }
+    
+    
+    
+    
+    
+    
+     
+    /**
+     * Get resultat
+     *
+     * @return string 
+     */
+    public function getResultat() {
+        return $this->resultat;
+    }
+
+    /**
+     * Set resultat
+     *
+     * @param string $resultat
+     * @return Matche
+     */
+    
+    public function setResultat($resultat) {
+        $this->resultat = $resultat;
+    }
+
+    
+    
+    public function getListeJournee() {
+        return $this->listeJournee;
+    }
+
+    public function setListeJournee($listeJournee) {
+        $this->listeJournee = $listeJournee;
+    }
+
+    /**
      * Set date
      *
      * @param \DateTime $date

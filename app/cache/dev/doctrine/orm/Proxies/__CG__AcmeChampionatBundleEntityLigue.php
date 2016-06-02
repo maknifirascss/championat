@@ -36,7 +36,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'nomLigue', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'id');
+            return ['__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'nomLigue', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'id'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'nomLigue', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'id');
+        return ['__isInitialized__', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'nomLigue', '' . "\0" . 'Acme\\ChampionatBundle\\Entity\\Ligue' . "\0" . 'id'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -179,7 +179,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
     public function setNomLigue($nomLigue)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomLigue', array($nomLigue));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomLigue', [$nomLigue]);
 
         return parent::setNomLigue($nomLigue);
     }
@@ -190,7 +190,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
     public function getNomLigue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNomLigue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNomLigue', []);
 
         return parent::getNomLigue();
     }
@@ -205,7 +205,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -216,7 +216,7 @@ class Ligue extends \Acme\ChampionatBundle\Entity\Ligue implements \Doctrine\ORM
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
     }

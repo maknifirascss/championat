@@ -27,71 +27,110 @@ class __TwigTemplate_a282fb49723688ddf952e3bec7128c2704e2ce9a6146a4589e50f309c53
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        // line 4
-        echo "<h1>Equipe list</h1>
+        // line 6
+        echo "<section id=\"sp-page-title\"><div class=\"row\"><div id=\"sp-title\" class=\"col-sm-12 col-md-12\"><div class=\"sp-column \"><div class=\"sp-page-title\"style=\"background-image: url('";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("template/images/demo/blog-bg.jpg"), "html", null, true);
+        echo "')\"><div class=\"container\"><h2>federation tunisienne de football - Equipes</h2>
+                        <ol class=\"breadcrumb\">
+                            <span>You are here: &#160;</span><li><a href=\"../../index-2.html\" class=\"pathway\">Home</a></li><li><a href=\"7.html\" class=\"pathway\">LIGA BBVA</a></li><li class=\"active\">Equipes</li></ol>
+                    </div></div></div></div></div></section><section id=\"sp-main-body\"><div class=\"container\"><div class=\"row\"><div id=\"sp-component\" class=\"col-sm-12 col-md-12\"><div class=\"sp-column \"><div id=\"system-message-container\">
+                    </div>
+                    <BR>
+                    <div id=\"spsoccer\" class=\"spsoccer view-spsoccer-tournament\">
+                        <div class=\"spsoccer-row-fluid\">
+                            <div class=\"torunament-info\">
+                                <div class=\"tournament-header\">
+                                    <h2 class=\"soccer-title\">";
+        // line 16
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity2"]) ? $context["entity2"] : $this->getContext($context, "entity2")), "nomLigue", array()), "html", null, true);
+        echo "</h2>
+                                    <H3>Saison: ";
+        // line 17
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity3"]) ? $context["entity3"] : $this->getContext($context, "entity3")), "libelle", array()), "html", null, true);
+        echo "</h3>
+                                </div>
+                            </div> <!-- /.spsoccer-col-lg -->
+                        </div>
+                    </div>
+                    <div id=\"akeeba-renderjoomla\">
 
-    <table class=\"records_list\">
-        <thead>
-            <tr>
-                <th>Nomequipe</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 15
+                        <div id=\"spsoccer\" class=\"spsoccer view-spsoccer-tournaments spsoccer-match-landing\">
+
+                            <h3 class=\"text-center title\"><span>Equipes</span></h3>
+                            <!-- START:: fixture -->
+
+                            <br>
+                            <!-- Liste des equipe chix teriner -->
+
+                            <section id=\"sp-main-body\"><div class=\"container\"><div class=\"row\"><div id=\"sp-component\" class=\"col-sm-12 col-md-12\"><div class=\"sp-column \"><div id=\"system-message-container\">
+                                                </div>
+                                                <div id=\"akeeba-renderjoomla\">
+
+                                                    <div id=\"spsoccer\" class=\"spsoccer view-spsoccer-teams\">
+                                                        <!-- Column -->
+                                                        <div class=\"spsoccer-row\">
+                                                            <!-- START:: SP Soccer Tournaments -->
+                                    ";
+        // line 40
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-            // line 16
-            echo "            <tr>
-                <td><a href=\"";
-            // line 17
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("equipe_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "nomEquipe", array()), "html", null, true);
-            echo "</a></td>
-                <td>";
-            // line 18
+            // line 41
+            echo "                                                            <div class=\"spsoccer-col-sm-6\">
+                                                                <div class=\"soccer-team\">
+                                                                    <div class=\"soccer-team-logo\">
+                                                                        <a href=\"";
+            // line 44
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("joueur", array("equipe" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
+            echo "\">
+
+                                                                            <img  class=\"spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb\" src=\"";
+            // line 46
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("template/images/logoEquipe/"), "html", null, true);
             echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "id", array()), "html", null, true);
-            echo "</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("equipe_show", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">show</a>
-                    </li>
-                    <li>
-                        <a href=\"";
-            // line 25
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("equipe_edit", array("id" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        ";
+            echo ".png\" alt=\"Manchester City\">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class=\"team-description\">
+                                                                        <a href=\"";
+            // line 50
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("joueur", array("equipe" => $this->getAttribute($context["entity"], "id", array()))), "html", null, true);
+            echo "\">
+                                                                            <h3>";
+            // line 51
+            echo twig_escape_filter($this->env, $this->getAttribute($context["entity"], "nomEquipe", array()), "html", null, true);
+            echo "</h3>
+                                                                        </a>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
-        echo "        </tbody>
-    </table>
+        // line 59
+        echo "                                                            <!-- END:: SP Soccer Tournaments -->
+                                                        </div>
+                                                   <!--    <a href=\"";
+        // line 61
+        echo "\">edit</a>   -->
+                                                        <!-- /Column -->
 
-        <ul>
-        <li>
-            <a href=\"";
-        // line 36
-        echo $this->env->getExtension('routing')->getPath("equipe_new");
-        echo "\">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+                                                        <!-- START:: Pagination -->
+                                                        <div class=\"soccer-pagination\">
+                                                        </div>
+                                                        <!-- END:: Pagination -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div></div>
+                                </div></section>
+
     ";
     }
 
@@ -107,48 +146,83 @@ class __TwigTemplate_a282fb49723688ddf952e3bec7128c2704e2ce9a6146a4589e50f309c53
 
     public function getDebugInfo()
     {
-        return array (  89 => 36,  82 => 31,  70 => 25,  64 => 22,  57 => 18,  51 => 17,  48 => 16,  44 => 15,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  119 => 61,  115 => 59,  101 => 51,  97 => 50,  89 => 46,  84 => 44,  79 => 41,  75 => 40,  49 => 17,  45 => 16,  31 => 6,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends '::base.html.twig' %}*/
 /* */
 /* {% block body -%}*/
-/*     <h1>Equipe list</h1>*/
 /* */
-/*     <table class="records_list">*/
-/*         <thead>*/
-/*             <tr>*/
-/*                 <th>Nomequipe</th>*/
-/*                 <th>Id</th>*/
-/*                 <th>Actions</th>*/
-/*             </tr>*/
-/*         </thead>*/
-/*         <tbody>*/
-/*         {% for entity in entities %}*/
-/*             <tr>*/
-/*                 <td><a href="{{ path('equipe_show', { 'id': entity.id }) }}">{{ entity.nomEquipe }}</a></td>*/
-/*                 <td>{{ entity.id }}</td>*/
-/*                 <td>*/
-/*                 <ul>*/
-/*                     <li>*/
-/*                         <a href="{{ path('equipe_show', { 'id': entity.id }) }}">show</a>*/
-/*                     </li>*/
-/*                     <li>*/
-/*                         <a href="{{ path('equipe_edit', { 'id': entity.id }) }}">edit</a>*/
-/*                     </li>*/
-/*                 </ul>*/
-/*                 </td>*/
-/*             </tr>*/
-/*         {% endfor %}*/
-/*         </tbody>*/
-/*     </table>*/
 /* */
-/*         <ul>*/
-/*         <li>*/
-/*             <a href="{{ path('equipe_new') }}">*/
-/*                 Create a new entry*/
-/*             </a>*/
-/*         </li>*/
-/*     </ul>*/
+/* <section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-page-title"style="background-image: url('{{ asset('template/images/demo/blog-bg.jpg') }}')"><div class="container"><h2>federation tunisienne de football - Equipes</h2>*/
+/*                         <ol class="breadcrumb">*/
+/*                             <span>You are here: &#160;</span><li><a href="../../index-2.html" class="pathway">Home</a></li><li><a href="7.html" class="pathway">LIGA BBVA</a></li><li class="active">Equipes</li></ol>*/
+/*                     </div></div></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">*/
+/*                     </div>*/
+/*                     <BR>*/
+/*                     <div id="spsoccer" class="spsoccer view-spsoccer-tournament">*/
+/*                         <div class="spsoccer-row-fluid">*/
+/*                             <div class="torunament-info">*/
+/*                                 <div class="tournament-header">*/
+/*                                     <h2 class="soccer-title">{{ entity2.nomLigue }}</h2>*/
+/*                                     <H3>Saison: {{entity3.libelle}}</h3>*/
+/*                                 </div>*/
+/*                             </div> <!-- /.spsoccer-col-lg -->*/
+/*                         </div>*/
+/*                     </div>*/
+/*                     <div id="akeeba-renderjoomla">*/
+/* */
+/*                         <div id="spsoccer" class="spsoccer view-spsoccer-tournaments spsoccer-match-landing">*/
+/* */
+/*                             <h3 class="text-center title"><span>Equipes</span></h3>*/
+/*                             <!-- START:: fixture -->*/
+/* */
+/*                             <br>*/
+/*                             <!-- Liste des equipe chix teriner -->*/
+/* */
+/*                             <section id="sp-main-body"><div class="container"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">*/
+/*                                                 </div>*/
+/*                                                 <div id="akeeba-renderjoomla">*/
+/* */
+/*                                                     <div id="spsoccer" class="spsoccer view-spsoccer-teams">*/
+/*                                                         <!-- Column -->*/
+/*                                                         <div class="spsoccer-row">*/
+/*                                                             <!-- START:: SP Soccer Tournaments -->*/
+/*                                     {% for entity in entities %}*/
+/*                                                             <div class="spsoccer-col-sm-6">*/
+/*                                                                 <div class="soccer-team">*/
+/*                                                                     <div class="soccer-team-logo">*/
+/*                                                                         <a href="{{ path('joueur', { 'equipe': entity.id }) }}">*/
+/* */
+/*                                                                             <img  class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{asset('template/images/logoEquipe/')}}{{ entity.id }}.png" alt="Manchester City">*/
+/*                                                                         </a>*/
+/*                                                                     </div>*/
+/*                                                                     <div class="team-description">*/
+/*                                                                         <a href="{{ path('joueur', { 'equipe': entity.id }) }}">*/
+/*                                                                             <h3>{{ entity.nomEquipe }}</h3>*/
+/*                                                                         </a>*/
+/* */
+/* */
+/*                                                                     </div>*/
+/*                                                                 </div>*/
+/*                                                             </div>*/
+/* {% endfor %}*/
+/*                                                             <!-- END:: SP Soccer Tournaments -->*/
+/*                                                         </div>*/
+/*                                                    <!--    <a href="{#{ path('equipe_edit', { 'id': entity.id }) }#}">edit</a>   -->*/
+/*                                                         <!-- /Column -->*/
+/* */
+/*                                                         <!-- START:: Pagination -->*/
+/*                                                         <div class="soccer-pagination">*/
+/*                                                         </div>*/
+/*                                                         <!-- END:: Pagination -->*/
+/* */
+/*                                                     </div>*/
+/*                                                 </div>*/
+/*                                             </div>*/
+/*                                         </div>*/
+/*                                     </div></div>*/
+/*                                 </div></section>*/
+/* */
 /*     {% endblock %}*/
 /* */

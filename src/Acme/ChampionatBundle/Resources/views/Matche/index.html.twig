@@ -1,38 +1,124 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-page-title"style="background-image: url('{{ asset('template/images/demo/blog-bg.jpg') }}')"><div class="container"><h2>Copa America 2015 - Matches</h2>
-                            <ol class="breadcrumb">
-                                <span>You are here: &#160;</span><li><a href="../../index-2.html" class="pathway">Home</a></li><li><a href="7.html" class="pathway">LIGA BBVA</a></li><li class="active">Matches</li></ol>
-                        </div></div></div></div></div></section>
-                            
-                            
-                            <section id="sp-main-body"><div class="container"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">
+<section id="sp-page-title"><div class="row"><div id="sp-title" class="col-sm-12 col-md-12"><div class="sp-column "><div class="sp-page-title"style="background-image: url('{{ asset('template/images/demo/blog-bg.jpg') }}')"><div class="container"><h2>Copa America 2015 - Matches</h2>
+                        <ol class="breadcrumb">
+                            <span>You are here: &#160;</span><li><a href="../../index-2.html" class="pathway">Home</a></li><li><a href="7.html" class="pathway">LIGA BBVA</a></li><li class="active">Matches</li></ol>
+                    </div></div></div></div></div></section><section id="sp-main-body"><div class="container"><div class="row"><div id="sp-component" class="col-sm-12 col-md-12"><div class="sp-column "><div id="system-message-container">
+                    </div>
+                    <BR>
+                    <div id="spsoccer" class="spsoccer view-spsoccer-tournament">
+                        <div class="spsoccer-row-fluid">
+                            <div class="torunament-info">
+                                <div class="tournament-header">
+                                    <h2 class="soccer-title">{{ entityLigue.nomLigue }}</h2>
+                                    <H3>Saison: {{entity3.libelle}}</h3>
+                                </div>
+                            </div> <!-- /.spsoccer-col-lg -->
                         </div>
-                        <div id="akeeba-renderjoomla">
+                    </div>
+                    <div id="akeeba-renderjoomla">
 
-                            <div id="spsoccer" class="spsoccer view-spsoccer-tournaments spsoccer-match-landing">
+                        <div id="spsoccer" class="spsoccer view-spsoccer-tournaments spsoccer-match-landing">
 
-                                <h3 class="text-center title"><span>Matches</span></h3>
-                                <!-- START:: fixture -->
+                            <h3 class="text-center title"><span>Matches</span></h3>
+                            <!-- START:: fixture -->
 
-                                {% for entity in entities %}
+                            <br>
+
+                            <!--Debut travail -->   
+
+                               {% block panelbody -%}
+
+
+                            <form method="GET" action="{{ path('matche') }}">
+
+                                <p >
+
+
+                                <table>
+                                    <tr>
+                                        <td > <span class="glyphicon glyphicon-time" aria-hidden="true" >     Date début Journée:{% for entity in dateDebJournee %}</span></td>
+                                        <td >&nbsp&nbsp&nbsp&nbsp {{entity.dateDebut|date('Y-m-d') }}{%endfor%}</td>
+                                    </tr>
+                                    <tr><td >&nbsp</td><td>&nbsp</td></tr>
+                                    <tr>
+                                        <td>  <span class="glyphicon glyphicon-dashboard" aria-hidden="true">  Date Fin Journée:{% for entity in dateFinJournee %}</span></td>
+                                        <td>&nbsp&nbsp&nbsp&nbsp {{entity.dateFin|date('Y-m-d') }}{%endfor%}</td>
+                                    </tr>
+
+                                </table>
+
+
+
+
+
+
+
+
+
+
+
+                                <BR>   <BR>
+
+                                <table>
+                                    <tr> 
+                                        <td > <span class="glyphicon glyphicon-sort-by-order-alt" aria-hidden="true">   <label for="jour">  Journeé:</label></td>
+                                        <td style="width: 40%"> <select style="width: 150px;" name="journee" id="jour">
+                                            {% for entity in libellejournne %}
+                                                        <option id={{entity.id}} value ={{entity.id}} style="width:  50px;">{{entity.libelle}}</option>     
+                                            {% endfor%}
+                                                    </select>
+                                                </td>  
+                                                <td style="width: 20%;"><button class="btn btn-warning" style="background-color: #fad32b;"  type="submit"   >
+
+                                                        Changer
+
+                                                    </button></span><br></td> 
+                                            </tr>
+                                        </table>
+
+
+
+
+
+                                        </p>
+                                    </form>
+
+
+
+                {% endblock %}
+
+                                    <br><br>
+
+{% block tableau -%}
+
+
+{% if urlidjournee >0 %}
+    {% for entity in entities %}
+
+
+        {% for listeMj in listeMatcheJournee %}
+                  {% if listeMj.id is sameas(entity.id) %}
 
                                     <div class="item-list-wrap">
-                                        <div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12 text-left">
-                                            <a href="matches/20-manchester-city-vs-bayen-munchen.html">
-                                                <img class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{ asset('template/images/demo/team-logo/8.png') }}" alt="Manchester City">
-                                                <span class="spsoccer-team-name">{{entity.idEquipe}}</span>
-                                            </a>
+                                        <div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-1 text-left">
+
+
+                                            <span  class="spsoccer-team-name">{{ entity.idEquipe }}</span>
+
+                                            <img  class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{asset('template/images/logoEquipeMinMatche/')}}{{ entity.idEquipe }}.png" alt="Manchester City">
                                         </div> <!-- /.spsoccer-col-lg -->
 
                                         <div class="spsoccer-col-lg-4 spsoccer-col-md-4 spsoccer-col-sm-12">
+
                                             <div class="spsoccer-match-date-time">
+                                                <h2>3 : 3</h2>
                                                 <span>{{ entity.date|date('Y-m-d') }}</span>,
-                                                <span>{{ entity.date|date('H:i') }}</span>
+                                                <span>{{ entity.date|date('H:i') }} PM</span>
                                             </div>
 
-                                            <p class="spsoccer-match-location">Old Trafford</p>
+                                            <p class="spsoccer-match-location"><a href="{{ path('butmarque', { 'matche': entity.id }) }}">  <button type="button" class="btn btn-info" style="background-color: #fad32b;">Détail</button></a></p>
 
                                             <!--p class="spsoccer-match-location">
                                                                             </p -->
@@ -42,7 +128,9 @@
                                             <a href="matches/20-manchester-city-vs-bayen-munchen.html">
                                                 <span class="spsoccer-team-name">{{entity.idEquipe2}}</span>
 
-                                                <img class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{ asset('template/images/demo/team-logo/5.png') }}"  alt="Bayern M�nchen" >
+                                                <img class="spsoccer-img-thumbnail spsoccer-img-responsive soccer-team-thumb" src="{{asset('template/images/logoEquipeMinMatche/')}}{{ entity.idEquipe2 }}.png" alt="Bayern M�nchen">
+
+
 
 
                                             </a>
@@ -50,36 +138,34 @@
 
                                     </div>
 
-                                {% endfor %}   
-
-                                <div class="soccer-pagination">
-                                    <ul class="pagination"><li class='active'><a>1</a></li><li><a class='' href='matches9b5f.html?start=5' title='2'>2</a></li><li><a class='next' href='matches9b5f.html?start=5' title='&raquo;'>&raquo;</a></li><li><a class='' href='matches9b5f.html?start=5' title='End'>End</a></li></ul>			</div>
-                                <!-- END:: Pagination -->
-
-                            </div></div>
-                    </div></div></div></div></section>
 
 
 
+                  {% endif %}
+                {% endfor%}
 
 
 
+        {% endfor %}
+
+
+            {% else%}
+                                    <p class="bg-danger" style="width: 350px; ">  Choissisez la journée</p>
+            {%endif%}
+                                    </tbody>
+                                    </table>
+
+
+    {% endblock %}
 
 
 
+                                    <div class="soccer-pagination">
+                                        <ul class="pagination">End</ul>			</div>
+                                    <!-- END:: Pagination -->
 
-
-
-
-
-
-
-
-
-
-
-
-
+                                </div></div>
+                        </div></div></div></div></section>
 
 
 
@@ -93,50 +179,72 @@
 
 
 
-    <!--
-    
-    <h1>Matche list</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Id</th>
-                <th>Id</th>
-                <th>Id</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+        
+        <h1>Matche list</h1>
+        
+        <table class="records_list">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Id</th>
+                    <th>Id</th>
+                    <th>Id</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
     {% for entity in entities %}
-        <tr>
-            <td><a href="{{ path('matche_show', { 'id': entity.id }) }}">{{ entity.date|date('Y-m-d H:i:s') }}</a></td>
-            <td>{{ entity.id }}</td>
-            <td>{{ entity.idEquipe }}</td>
-            <td>{{ entity.idEquipe2 }}</td>
-            <td>
-            <ul>
-                <li>
-                    <a href="{{ path('matche_show', { 'id': entity.id }) }}">show</a>
-                </li>
-                <li>
-                    <a href="{{ path('matche_edit', { 'id': entity.id }) }}">edit</a>
-                </li>
-            </ul>
-            </td>
-        </tr>
+            <tr>
+                <td><a href="{{ path('matche_show', { 'id': entity.id }) }}">{{ entity.date|date('Y-m-d H:i:s') }}</a></td>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.idEquipe }}</td>
+                <td>{{ entity.idEquipe2 }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('matche_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('matche_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
     {% endfor %}
-    </tbody>
-</table>
-
-    <ul>
-    <li>
-        <a href="{{ path('matche_new') }}">
-            Create a new entry
-        </a>
-    </li>
-</ul>
-            
-            
-    -->  
+        </tbody>
+        </table>
+        
+        <ul>
+        <li>
+            <a href="{{ path('matche_new') }}">
+                Create a new entry
+            </a>
+        </li>
+        </ul>
+                
+                
+        -->  
 {% endblock %}

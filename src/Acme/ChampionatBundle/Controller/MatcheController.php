@@ -25,7 +25,6 @@ class MatcheController extends Controller {
      * @Template()
      */
     public function indexAction() {
-
         $request = Request::createFromGlobals();
 
         $em = $this->getDoctrine()->getManager();
@@ -59,7 +58,7 @@ class MatcheController extends Controller {
 
 
 
-        /* exmple pour le test */
+
         $result = $em->createQueryBuilder();
         $dqlj = $result->select('m.id')
                 ->from('AcmeChampionatBundle:Matche', 'm')
@@ -88,10 +87,10 @@ class MatcheController extends Controller {
                 ->andWhere('journee1.id=match1.idJournee')
                 ->getQuery()
                 ->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
-       
 
 
-     
+
+
         return array(
             'entities' => $entities,
             'entityLigue' => $entityLigue,
@@ -104,7 +103,7 @@ class MatcheController extends Controller {
             'dateFinJournee' => $dateFinJournee,
             'entities1' => $entities1,
             'entities2' => $entities2,
-         
+                //   'resultat' => $nombre,
         );
     }
 
